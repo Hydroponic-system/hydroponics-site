@@ -1,28 +1,17 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agri Hydroponics | Professional Tower & Greenhouse Systems Specialist</title>
-    <!-- 使用更适合国内访问的 Tailwind 镜像 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 轮播图核心样式：确保 100% 宽度，高度由图片内容撑开，绝不裁剪 */
-        .slide { 
-            display: none; 
-            width: 100%; 
-        }
-        .slide.active { 
-            display: block; 
-            animation: fadeIn 0.6s ease-in-out; 
-        }
+        /* 轮播图核心样式：确保高度随图片比例自适应，文字绝不裁剪 */
+        .slide { display: none; width: 100%; }
+        .slide.active { display: block; animation: fadeIn 0.6s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0.7; } to { opacity: 1; } }
-
-        /* 防止导航栏遮挡，设置一个基础背景色防止加载时闪烁 */
         #home { background-color: #f9fafb; position: relative; }
-
-        /* 优化控制按钮：确保在全屏宽度下也能看清 */
         .carousel-control {
             background: rgba(0,0,0,0.2);
             backdrop-filter: blur(4px);
@@ -49,31 +38,27 @@
         </div>
     </nav>
 
-    <!-- Full Width Carousel (使用 <img> 标签确保图片和文字 100% 完整) -->
+    <!-- Professional Carousel (Full Width, No Cropping) -->
     <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
         <div class="relative w-full">
-            <!-- Slide 1 -->
-            <img src="banner1.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
-            <!-- Slide 2 -->
+            <!-- 根据你的截图，第一张是 banner.jpg -->
+            <img src="banner.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
             <img src="banner2.jpg" class="slide" alt="Agri Hydroponics Banner 2">
-            <!-- Slide 3 -->
             <img src="banner3.jpg" class="slide" alt="Agri Hydroponics Banner 3">
 
-            <!-- Controls (左箭头) -->
             <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
                 <i class="fas fa-chevron-left text-xl lg:text-2xl"></i>
             </button>
-            <!-- Controls (右箭头) -->
             <button onclick="changeSlide(1)" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
                 <i class="fas fa-chevron-right text-xl lg:text-2xl"></i>
             </button>
         </div>
     </section>
 
-    <!-- Professional Features -->
+    <!-- Industrial Features Section -->
     <section id="solutions" class="py-16 bg-white border-b border-gray-50">
-        <div class="container mx-auto px-6 text-center lg:text-left">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
                 <div class="border-l-4 border-green-600 pl-6">
                     <h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3>
                     <p class="text-gray-500 text-sm">Direct manufacturing eliminates middleman costs.</p>
@@ -94,85 +79,83 @@
         </div>
     </section>
 
-    <!-- Product Grid -->
-       <!-- Core Product Solutions (6-Grid Professional Layout) -->
-    <section id="products" class="py-24 bg-gray-50 border-t border-gray-100">
+    <!-- Core Product Solutions (6-Grid Professional) -->
+    <section id="products" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-4 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
-            <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16"></div>
+            <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16 text-center"></div>
             
-            <!-- 响应式网格：电脑端3列，平板2列，手机1列 -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
                 
-                <!-- 1. Hydroponic Tower System -->
+                <!-- 1. Tower System -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="tower.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Hydroponic Tower System" onerror="this.src='https://via.placeholder.com/800x600?text=Tower+System'">
+                        <img src="tower.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Tower System">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Hydroponic Tower System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Vertical farming solutions. Maximize space and yield for commercial leafy greens production.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Tower System</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Vertical farming solutions. Maximize space and yield for commercial production.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
-                <!-- 2. Hydroponic NFT System -->
+                <!-- 2. NFT System -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="nft.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Hydroponic NFT System" onerror="this.src='https://via.placeholder.com/800x600?text=NFT+System'">
+                        <img src="nft.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="NFT System">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Hydroponic NFT System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Industry-standard square NFT channels. UV-resistant and long-lasting for professional farms.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">NFT System</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Industry-standard square NFT channels. UV-resistant and professional-grade.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
-                <!-- 3. Dutch Bucket Hydroponic System -->
+                <!-- 3. Dutch Bucket -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="dutch-bucket.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Dutch Bucket System" onerror="this.src='https://via.placeholder.com/800x600?text=Dutch+Bucket'">
+                        <img src="dutch-bucket.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Dutch Bucket">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Dutch Bucket System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">The most reliable system for vine crops like tomatoes, peppers, and cucumbers.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Dutch Bucket</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Reliable systems for vine crops such as tomatoes, peppers, and cucumbers.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
-                <!-- 4. Greenhouse Solutions -->
+                <!-- 4. Greenhouse -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="greenhouse.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Greenhouse Solutions" onerror="this.src='https://via.placeholder.com/800x600?text=Greenhouse'">
+                        <img src="greenhouse.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Greenhouse">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3 text-green-800">Greenhouse Solutions</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Advanced climate-controlled greenhouse structures for large-scale agricultural projects.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3 text-green-800">Greenhouse</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Advanced climate-controlled structures for modern large-scale projects.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
                 <!-- 5. Seedling Tray -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="seedling-tray.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Seedling Tray" onerror="this.src='https://via.placeholder.com/800x600?text=Seedling+Tray'">
+                        <img src="seedling-tray.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Seedling Tray">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Nursery Seedling Trays</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Professional propagation trays with various cell configurations for optimal germination.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Seedling Tray</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Durable propagation trays with various cell counts for optimal germination.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
-                <!-- 6. Ebb and Flow Table -->
+                <!-- 6. Ebb & Flow Table -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="ebb-flow.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Ebb and Flow Table" onerror="this.src='https://via.placeholder.com/800x600?text=Ebb+Flow+Table'">
+                        <img src="ebb-flow.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Ebb & Flow Table">
                     </div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Ebb and Flow Tables</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Tidal seedbeds for automatic irrigation in professional nursery and propagation centers.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Wholesale Price <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-xl font-bold uppercase tracking-tighter text-gray-900 mb-3">Ebb & Flow Table</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Automatic tidal irrigation benches for professional nursery production.</p>
+                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
 
@@ -182,7 +165,7 @@
 
     <!-- Footer Contact -->
     <section id="contact" class="py-24 bg-green-800 text-white text-center">
-        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-center">Verified B2B Supplier</h2>
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">Verified B2B Supplier</h2>
         <div class="inline-flex flex-col items-center">
             <a href="mailto:contact@agrihydroponics.com" class="bg-white text-green-900 px-12 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl">Email: contact@agrihydroponics.com</a>
         </div>
@@ -197,27 +180,15 @@
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
-
         function showSlide(n) {
-            // 隐藏当前的
             slides[currentSlide].classList.remove('active');
             slides[currentSlide].style.display = 'none';
-            
-            // 计算下一个
             currentSlide = (n + slides.length) % slides.length;
-            
-            // 显示下一个
             slides[currentSlide].classList.add('active');
             slides[currentSlide].style.display = 'block';
         }
-
-        function changeSlide(n) {
-            showSlide(currentSlide + n);
-        }
-
-        // 自动轮播 (5秒)
+        function changeSlide(n) { showSlide(currentSlide + n); }
         setInterval(() => changeSlide(1), 5000);
     </script>
-
 </body>
 </html>
