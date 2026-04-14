@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 轮播图：100% 完整显示，绝不裁剪 */
+        /* 轮播图：100% 完整显示 */
         .slide { display: none; width: 100%; }
         .slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0.6; } to { opacity: 1; } }
@@ -29,7 +29,7 @@
                 <i class="fas fa-leaf text-green-600 text-3xl"></i>
                 <span class="text-2xl font-black tracking-tighter text-green-800 uppercase">Agri Hydro</span>
             </div>
-            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700 uppercase text-sm tracking-widest">
+            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700 uppercase text-sm tracking-widest text-gray-600">
                 <a href="#home" class="hover:text-green-600 transition">Home</a>
                 <a href="#solutions" class="hover:text-green-600 transition">Solutions</a>
                 <a href="#products" class="hover:text-green-600 transition">Products</a>
@@ -38,12 +38,12 @@
         </div>
     </nav>
 
-    <!-- Professional Carousel (Full Width) -->
+    <!-- Banner Section -->
     <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
         <div class="relative w-full">
             <img src="banner.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
-            <img src="banner2.jpg" class="slide" alt="Professional Greenhouse Systems">
-            <img src="banner3.jpg" class="slide" alt="Hydroponic Solutions">
+            <img src="banner2.jpg" class="slide" alt="Banner 2">
+            <img src="banner3.jpg" class="slide" alt="Banner 3">
 
             <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
                 <i class="fas fa-chevron-left text-xl lg:text-2xl"></i>
@@ -54,103 +54,114 @@
         </div>
     </section>
 
-    <!-- Industrial Features -->
+    <!-- Features Section -->
     <section id="solutions" class="py-16 bg-white border-b border-gray-50">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3><p class="text-gray-500 text-sm">Direct manufacturing for maximum competitiveness.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">OEM / ODM</h3><p class="text-gray-500 text-sm">Customized dimensions & systems for your unique needs.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Global Shipping</h3><p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Technical Support</h3><p class="text-gray-500 text-sm">Full guidance from project design to installation.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase italic">Factory Price</h3><p class="text-gray-500 text-sm">Direct manufacturing for maximum competitiveness.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase italic">OEM / ODM</h3><p class="text-gray-500 text-sm">Customized dimensions & systems for your unique needs.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase italic">Global Shipping</h3><p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase italic">Technical Support</h3><p class="text-gray-500 text-sm">Full guidance from project design to installation.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Core Product Solutions (6-Grid Gallery with Updated Names) -->
-         <!-- Core Product Solutions (B2B Pro Layout) -->
+    <!-- Core Product Solutions (大图正方形 + 长方形卡片版) -->
     <section id="products" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-4 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
             <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16 text-center"></div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
                 
-                <!-- 产品卡片模板 (重复 6 次，仅需修改图片名和标题) -->
                 <!-- 1. Hydroponic Tower System -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <!-- 图片容器：使用 16:9 比例，这是工业设计最舒服的视觉比例 -->
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <!-- 图片容器：设置为正方形，且去掉内边距让图铺满 -->
+                    <div class="aspect-square w-full overflow-hidden bg-white">
                         <img src="hydroponic tower system.jpg" 
-                             class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply" 
+                             class="w-full h-full object-cover transition duration-700 group-hover:scale-110" 
                              alt="Hydroponic Tower System">
                     </div>
-                    <div class="p-8">
+                    <!-- 文字容器：底部增加内边距，使整体呈现垂直长方形 -->
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Hydroponic Tower System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">High-density vertical farming solutions for commercial leafy greens production.</p>
-                        <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">
-                            Inquiry Now 
-                            <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i>
-                        </a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">High-density vertical farming solutions for commercial production.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">
+                                Inquiry Now 
+                                <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 2. Hydroponic NFT System -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
-                        <img src="hydroponic nft system.jpg" class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="hydroponic nft system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Hydroponic NFT System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">Industry-standard NFT channels. UV-resistant and professional-grade construction.</p>
-                        <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">Industry-standard square NFT channels. UV-resistant and long-lasting.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 3. Dutch Bucket System -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
-                        <img src="dutch bucket system.jpg" class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="dutch bucket system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Dutch Bucket System</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">Reliable and efficient irrigation systems for vine crops like tomatoes and cucumbers.</p>
-                        <a href="#contact" class="inline-block font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">Reliable and efficient systems for vine crops such as tomatoes and cucumbers.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 4. Greenhouse -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
-                        <img src="greenhouse.jpg" class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="greenhouse.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-green-800 mb-3">Greenhouse</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">Advanced climate-controlled structures for modern large-scale agricultural projects.</p>
-                        <a href="#contact" class="inline-block font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">Advanced climate-controlled structures for modern large-scale projects.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 5. Seedling Tray -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
-                        <img src="seedling tray.jpg" class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="seedling tray.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Seedling Tray</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">Durable propagation trays designed for optimal germination and young plant health.</p>
-                        <a href="#contact" class="inline-block font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">Durable propagation trays designed for optimal germination and health.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 6. Ebb and Flow Table -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden">
-                    <div class="aspect-video bg-gray-50 flex items-center justify-center p-8 overflow-hidden relative">
-                        <img src="ebb and flow table.jpg" class="max-w-[85%] max-h-[85%] object-contain transition duration-700 group-hover:scale-110 mix-blend-multiply">
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="ebb and flow table.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     </div>
-                    <div class="p-8">
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Ebb and Flow Table</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic min-h-[40px]">Automatic tidal irrigation benches for professional nursery and propagation centers.</p>
-                        <a href="#contact" class="inline-block font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">Automatic tidal irrigation benches for professional nursery production.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
                     </div>
                 </div>
 
@@ -158,8 +169,35 @@
         </div>
     </section>
 
+    <!-- Multi-Contact Section -->
+    <section id="contact" class="py-24 bg-green-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">Contact Our Export Experts</h2>
+            <p class="mb-16 opacity-70 text-lg max-w-2xl mx-auto italic text-center">Your reliable B2B partner for high-quality greenhouse & hydroponic systems.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition text-center">
+                    <i class="fab fa-whatsapp text-4xl mb-6 text-green-400"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">WhatsApp</h5>
+                    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="font-bold text-green-400 hover:text-white transition">+86 1XX XXXX XXXX</a>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition text-center">
+                    <i class="fas fa-envelope text-4xl mb-6 text-blue-400"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">Inquiry Email</h5>
+                    <a href="mailto:contact@agrihydroponics.com" class="font-bold text-blue-400 hover:text-white transition">contact@agrihydroponics.com</a>
+                </div>
+                <div class="bg-white/10 p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition text-center">
+                    <i class="fab fa-weixin text-4xl mb-6 text-green-500"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">WeChat</h5>
+                    <p class="font-bold text-green-500 uppercase tracking-widest">ID: YOUR_WECHAT_ID</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-gray-950 text-white py-12 text-center border-t border-gray-900">
-        <div class="container mx-auto px-6 text-center opacity-40 text-xs uppercase tracking-widest">
+        <div class="container mx-auto px-6 text-center opacity-40 text-xs uppercase tracking-widest italic">
             &copy; 2026 Agri Hydroponics. All rights reserved.
         </div>
     </footer>
@@ -167,6 +205,7 @@
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
+
         function showSlide(n) {
             slides[currentSlide].classList.remove('active');
             slides[currentSlide].style.display = 'none';
@@ -174,7 +213,12 @@
             slides[currentSlide].classList.add('active');
             slides[currentSlide].style.display = 'block';
         }
-        function changeSlide(n) { showSlide(currentSlide + n); }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        // 自动轮播 (5秒切换)
         setInterval(() => changeSlide(1), 5000);
     </script>
 </body>
