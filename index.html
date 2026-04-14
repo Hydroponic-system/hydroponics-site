@@ -4,219 +4,313 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agri Hydroponics | Professional Tower & Greenhouse Systems Manufacturer</title>
+    <meta name="description" content="Leading manufacturer of hydroponic tower systems, NFT channels, and professional greenhouse solutions. Exporting to 100+ countries.">
+    
+    <!-- Tailwind CSS & Font Awesome 6.4 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        /* 轮播图：100% 完整显示，确保文字不切边 */
         .slide { display: none; width: 100%; }
         .slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0.6; } to { opacity: 1; } }
+        
         #home { background-color: #f9fafb; position: relative; }
-        .carousel-control { background: rgba(0,0,0,0.15); backdrop-filter: blur(4px); transition: all 0.3s; }
+        
+        /* 轮播图左右控制按钮 */
+        .carousel-control {
+            background: rgba(0,0,0,0.15);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s;
+        }
         .carousel-control:hover { background: rgba(0,0,0,0.4); }
+
+        /* 统一产品描述文字溢出处理：保持3行 */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans leading-normal">
 
-    <!-- Navigation -->
+    <!-- 1. Navigation (Logo双色强化) -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-leaf text-green-600 text-3xl"></i>
-                <span class="text-2xl font-black tracking-tighter text-green-800 uppercase">Agri Hydro</span>
+                <span class="text-2xl font-black tracking-tighter text-gray-900 uppercase">
+                    Agri <span class="text-green-600">Hydro</span><span class="text-gray-400 font-light lowercase">ponics</span>
+                </span>
             </div>
-            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700 uppercase text-sm tracking-widest text-gray-600">
+            <div class="hidden lg:flex space-x-8 font-bold text-gray-600 uppercase text-xs tracking-widest">
                 <a href="#home" class="hover:text-green-600 transition">Home</a>
+                <a href="#solutions" class="hover:text-green-600 transition">Why Us</a>
                 <a href="#about" class="hover:text-green-600 transition">About Us</a>
                 <a href="#products" class="hover:text-green-600 transition">Products</a>
                 <a href="#crops" class="hover:text-green-600 transition">Crops</a>
-                <a href="#contact" class="bg-green-600 text-white px-8 py-2 rounded-lg hover:bg-green-700 transition shadow-md">Get a Quote</a>
+                <a href="#contact" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg">Get Quote</a>
             </div>
         </div>
     </nav>
 
-    <!-- Banner Section -->
+    <!-- 2. Banner Section (100% Width Mode) -->
     <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
         <div class="relative w-full">
-            <img src="banner.jpg" class="slide active" alt="Banner 1">
-            <img src="banner2.jpg" class="slide" alt="Banner 2">
-            <img src="banner3.jpg" class="slide" alt="Banner 3">
-            <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20"><i class="fas fa-chevron-left text-xl lg:text-2xl"></i></button>
-            <button onclick="changeSlide(1)" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20"><i class="fas fa-chevron-right text-xl lg:text-2xl"></i></button>
+            <img src="banner.jpg" class="slide active" alt="Professional Greenhouse Banner">
+            <img src="banner2.jpg" class="slide" alt="Hydroponics System Factory">
+            <img src="banner3.jpg" class="slide" alt="Modern Farming Solutions">
+
+            <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-left text-xl lg:text-2xl"></i>
+            </button>
+            <button onclick="changeSlide(1)" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-right text-xl lg:text-2xl"></i>
+            </button>
         </div>
     </section>
 
-    <!-- 1. WHY CHOOSE US Section (按你提供的图1设计) -->
-    <section class="py-24 bg-white">
+    <!-- 3. Why Choose Us (工业极简风) -->
+    <section id="solutions" class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                 <!-- High Quality -->
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                <div class="flex flex-col items-center group">
+                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-award text-4xl text-green-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">High quality</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed italic">Strict QC systems and premium materials to ensure durability of every component.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tight text-gray-900">High quality</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">Strict QC systems and premium materials ensure long-term stability.</p>
                 </div>
                 <!-- Low Price -->
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                <div class="flex flex-col items-center group">
+                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-tags text-4xl text-green-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Low price</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed italic">Direct factory manufacturing to provide the most competitive pricing for our partners.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tight text-gray-900">Low price</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">Factory-direct manufacturing provides the best ROI for your project.</p>
                 </div>
                 <!-- Good Service -->
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                <div class="flex flex-col items-center group">
+                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-headset text-4xl text-green-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Good service</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed italic">24/7 technical support and professional consulting for your agricultural projects.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tight text-gray-900">Good service</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">One-stop technical guidance from design to final installation.</p>
                 </div>
-                <!-- Support customization -->
-                <div class="flex flex-col items-center">
-                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
+                <!-- Customization -->
+                <div class="flex flex-col items-center group">
+                    <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-tools text-4xl text-green-600"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 uppercase tracking-tight">Support customization</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed italic">OEM/ODM support tailored to meet your specific greenhouse and planting needs.</p>
+                    <h3 class="text-xl font-black mb-3 uppercase tracking-tight text-gray-900">Support customization</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed italic">OEM/ODM support tailored to meet your unique planting needs.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 2. Core Product Solutions -->
+    <!-- 4. Core Product Solutions (大图正方形 + 呼吸卡片) -->
     <section id="products" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-16 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
-                <!-- 产品卡片 (保持你的正方形大图版) -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="hydroponic tower system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col">
+                
+                <!-- 1. Tower System -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="hydroponic tower system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Tower System">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
                         <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Hydroponic Tower System</h4>
-                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-2">High-density vertical farming solutions for commercial production.</p>
-                        <div class="mt-auto"><a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a></div>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Vertical farming solutions for high-density commercial production. Perfect for strawberries and leafy greens.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 hover:text-green-800 uppercase text-xs tracking-widest group">
+                                Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <!-- 其他产品依此类推... (代码中已包含全部 6 个) -->
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="hydroponic nft system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col"><h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Hydroponic NFT System</h4><p class="text-gray-500 mb-8 text-sm italic">Industry-standard NFT channels. UV-resistant and long-lasting.</p><div class="mt-auto"><a href="#contact" class="font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+
+                <!-- 2. NFT System -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="hydroponic nft system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-green-800">
+                        <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Hydroponic NFT System</h4>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Industry-standard square NFT channels. UV-resistant and professional-grade for professional farms.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="dutch bucket system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col"><h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Dutch Bucket System</h4><p class="text-gray-500 mb-8 text-sm italic">Efficient systems for vine crops like tomatoes and cucumbers.</p><div class="mt-auto"><a href="#contact" class="font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+
+                <!-- 3. Dutch Bucket -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="dutch bucket system.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Dutch Bucket System</h4>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Reliable and efficient irrigation systems for crops such as tomatoes, peppers and cucumbers.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="greenhouse.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col"><h4 class="text-xl font-bold uppercase text-green-800 mb-3">Greenhouse</h4><p class="text-gray-500 mb-8 text-sm italic">Advanced structures for modern large-scale projects.</p><div class="mt-auto"><a href="#contact" class="font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+
+                <!-- 4. Greenhouse -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="greenhouse.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold uppercase tracking-tight text-green-800 mb-3">Greenhouse Solutions</h4>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Advanced climate-controlled structures for modern large-scale greenhouse projects worldwide.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="seedling tray.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col"><h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Seedling Tray</h4><p class="text-gray-500 mb-8 text-sm italic">Durable propagation trays for optimal plant health.</p><div class="mt-auto"><a href="#contact" class="font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+
+                <!-- 5. Seedling Tray -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col text-green-800">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="seedling tray.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Seedling Tray</h4>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Durable propagation trays designed for optimal germination and plant health.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 uppercase text-xs tracking-widest group">Inquiry Now <i class="fas fa-arrow-right ml-2 transform transition-transform group-hover:translate-x-2"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all border border-gray-100 group overflow-hidden flex flex-col">
-                    <div class="aspect-square w-full overflow-hidden bg-white"><img src="ebb and flow table.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110"></div>
-                    <div class="p-8 flex-grow flex flex-col"><h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Ebb and Flow Table</h4><p class="text-gray-500 mb-8 text-sm italic">Automatic tidal benches for professional nursery.</p><div class="mt-auto"><a href="#contact" class="font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a></div></div>
+
+                <!-- 6. Ebb & Flow Table -->
+                <div class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group overflow-hidden flex flex-col">
+                    <div class="aspect-square w-full overflow-hidden bg-white">
+                        <img src="ebb and flow table.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h4 class="text-xl font-bold uppercase tracking-tight text-gray-900 mb-3">Ebb and Flow Table</h4>
+                        <p class="text-gray-500 mb-8 text-sm leading-relaxed italic line-clamp-3">Automatic tidal irrigation benches for professional nursery and propagation production.</p>
+                        <div class="mt-auto">
+                            <a href="#contact" class="inline-flex items-center font-black text-green-600 uppercase text-xs">Inquiry Now <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 3. ABOUT US / Company Profile Section (按你提供的图2设计) -->
+    <!-- 5. About Us (实力展示版) -->
     <section id="about" class="py-24 bg-white overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- 左侧：工厂图片 -->
-                <div class="lg:w-1/2 relative">
+                <!-- Image Side -->
+                <div class="lg:w-1/2 relative group">
                     <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                        <!-- 建议上传一张工厂或温室的全景实拍图，命名为 factory.jpg -->
-                        <img src="factory.jpg" alt="Agri Hydroponics Factory" class="w-full h-auto object-cover" onerror="this.src='https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=1200&q=80'">
+                        <img src="factory.jpg" alt="Agri Hydroponics Manufacturer" class="w-full h-auto" onerror="this.src='https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=1200&q=80'">
                     </div>
-                    <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-green-600/10 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-green-600/10 rounded-full -z-10 animate-pulse"></div>
                 </div>
-                <!-- 右侧：文字介绍 -->
+                <!-- Content Side -->
                 <div class="lg:w-1/2">
-                    <h5 class="text-green-600 font-bold uppercase tracking-widest text-sm mb-4">Professional Manufacturer</h5>
-                    <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-gray-900">Agri Hydroponics</h2>
+                    <h5 class="text-green-600 font-bold uppercase tracking-widest text-xs mb-4">Manufacturer & Exporter</h5>
+                    <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-gray-900 leading-none">About Agri <br><span class="text-green-600">Hydroponics</span></h2>
                     <p class="text-gray-600 mb-8 leading-relaxed italic">
-                        Agri Hydroponics is a leading professional manufacturer and exporter specializing in high-performance greenhouse structures and hydroponic cultivation systems. With years of industry expertise, we provide one-stop agricultural solutions for global clients.
+                        Agri Hydroponics is a leading professional manufacturer specializing in modern greenhouse structures and hydroponic cultivation systems. With years of experience and a passion for agriculture, we provide global clients with efficient, sustainable, and high-performance solutions.
                     </p>
-                    <ul class="space-y-4 mb-10">
-                        <li class="flex items-center space-x-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-600"></i> <span>Professional R&D and Engineering Team</span></li>
-                        <li class="flex items-center space-x-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-600"></i> <span>Complete OEM / ODM Customization Support</span></li>
-                        <li class="flex items-center space-x-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-600"></i> <span>Strict International Quality Control Standards</span></li>
-                        <li class="flex items-center space-x-3 text-gray-700 font-semibold"><i class="fas fa-check-circle text-green-600"></i> <span>Reliable Global Logistics and Shipping Support</span></li>
+                    <ul class="space-y-4 mb-10 text-sm font-bold text-gray-700">
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-600"></i> <span>Professional Project Consulting</span></li>
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-600"></i> <span>Full OEM / ODM Customization Support</span></li>
+                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-600"></i> <span>Global Logistics and Export Excellence</span></li>
                     </ul>
-                    <a href="#contact" class="bg-gray-900 text-white px-10 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Inquiry Today</a>
+                    <a href="#contact" class="inline-block bg-gray-900 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Contact Experts</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Crops Collection Section -->
-    <section id="crops" class="py-24 bg-gray-50 border-t border-gray-100">
-        <div class="container mx-auto px-6 text-center">
+    <!-- 6. Crops Collection (沉浸式网格) -->
+    <section id="crops" class="py-24 bg-gray-50 border-t border-gray-100 text-center">
+        <div class="container mx-auto px-6">
             <h2 class="text-4xl font-black mb-16 uppercase tracking-tight text-gray-900">Crops Collection</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
+                <!-- 循环5张作物图 -->
                 <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
-                    <img src="crop-leafy.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=800&q=80'">
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition flex flex-col items-center justify-center text-white p-4">
-                        <i class="fas fa-leaf text-3xl mb-3"></i><span class="font-bold uppercase tracking-widest text-xs">Leafy Greens</span>
+                    <img src="crop-leafy.jpg" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=600'">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex flex-col items-center justify-center text-white p-4">
+                        <i class="fas fa-leaf text-2xl mb-3"></i><span class="font-bold uppercase tracking-widest text-[10px]">Leafy Vegetables</span>
                     </div>
                 </div>
                 <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
-                    <img src="crop-herbs.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=80'">
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition flex flex-col items-center justify-center text-white p-4">
-                        <i class="fas fa-seedling text-3xl mb-3"></i><span class="font-bold uppercase tracking-widest text-xs">Herbs & Spices</span>
-                    </div>
-                </div>
-                <!-- ... 其他作物以此类推 (代码已包含 5 个) -->
-                <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
-                    <img src="crop-microgreens.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=800&q=80'">
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition flex flex-col items-center justify-center text-white"><i class="fas fa-spa text-3xl mb-3"></i><span class="font-bold uppercase text-xs">Microgreens</span></div>
+                    <img src="crop-herbs.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600'">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex flex-col items-center justify-center text-white p-4"><i class="fas fa-seedling text-2xl mb-3"></i><span class="font-bold uppercase text-[10px]">Herbs & Spices</span></div>
                 </div>
                 <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
-                    <img src="crop-fruits.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=800&q=80'">
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition flex flex-col items-center justify-center text-white"><i class="fas fa-pepper-hot text-3xl mb-3"></i><span class="font-bold uppercase text-xs">Fruiting Crops</span></div>
+                    <img src="crop-microgreens.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=600'">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex flex-col items-center justify-center text-white p-4"><i class="fas fa-spa text-2xl mb-3"></i><span class="font-bold uppercase text-[10px]">Microgreens</span></div>
                 </div>
                 <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
-                    <img src="crop-fodder.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?auto=format&fit=crop&w=800&q=80'">
-                    <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition flex flex-col items-center justify-center text-white"><i class="fas fa-wheat-awn text-3xl mb-3"></i><span class="font-bold uppercase text-xs">Animal Fodder</span></div>
+                    <img src="crop-fruits.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=600'">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex flex-col items-center justify-center text-white p-4"><i class="fas fa-pepper-hot text-2xl mb-3"></i><span class="font-bold uppercase text-[10px]">Fruiting Crops</span></div>
+                </div>
+                <div class="relative group aspect-[3/4] overflow-hidden rounded-xl bg-gray-200">
+                    <img src="crop-fodder.jpg" class="w-full h-full object-cover transition group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?auto=format&fit=crop&w=600'">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition flex flex-col items-center justify-center text-white p-4"><i class="fas fa-wheat-awn text-2xl mb-3"></i><span class="font-bold uppercase text-[10px]">Fodder Production</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. Contact Section -->
-    <section id="contact" class="py-24 bg-green-900 text-white">
+    <!-- 7. Contact Section (终极获客版) -->
+    <section id="contact" class="py-24 bg-green-950 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">Contact Our Export Experts</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto mt-16">
-                <div class="bg-white/10 p-10 rounded-2xl border border-white/20 hover:bg-white/20 transition">
-                    <i class="fab fa-whatsapp text-4xl mb-6 text-green-400"></i>
-                    <h5 class="text-xl font-bold mb-2 uppercase italic tracking-widest">WhatsApp</h5>
-                    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="font-bold text-green-400 hover:text-white transition">+86 1XX XXXX XXXX</a>
-                </div>
-                <div class="bg-white/10 p-10 rounded-2xl border border-white/20 hover:bg-white/20 transition">
-                    <i class="fas fa-envelope text-4xl mb-6 text-blue-400"></i>
-                    <h5 class="text-xl font-bold mb-2 uppercase italic tracking-widest">Inquiry Email</h5>
-                    <a href="mailto:contact@agrihydroponics.com" class="font-bold text-blue-400 hover:text-white transition">contact@agrihydroponics.com</a>
-                </div>
-                <div class="bg-white/10 p-10 rounded-2xl border border-white/20 hover:bg-white/20 transition">
-                    <i class="fab fa-weixin text-4xl mb-6 text-green-500"></i>
-                    <h5 class="text-xl font-bold mb-2 uppercase italic tracking-widest">WeChat</h5>
-                    <p class="font-bold text-green-500 uppercase tracking-widest">ID: YOUR_WECHAT_ID</p>
+            <h2 class="text-4xl font-black mb-6 uppercase tracking-tighter">Verified Export Partner</h2>
+            <p class="mb-16 opacity-60 text-lg max-w-2xl mx-auto italic">High-quality greenhouse systems exported to 100+ countries since 2016.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/8613800000000" class="bg-white/10 p-10 rounded-2xl border border-white/10 hover:bg-white/20 transition group">
+                    <i class="fab fa-whatsapp text-5xl mb-6 text-green-400 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">WhatsApp</h5>
+                    <p class="text-sm opacity-50 mb-6 italic text-green-400">Click to chat online</p>
+                    <p class="text-lg font-black tracking-widest">+86 138 0000 0000</p>
+                </a>
+                <!-- Email -->
+                <a href="mailto:contact@agrihydroponics.com" class="bg-white/10 p-10 rounded-2xl border border-white/10 hover:bg-white/20 transition group">
+                    <i class="fas fa-envelope text-5xl mb-6 text-blue-400 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">Inquiry Email</h5>
+                    <p class="text-sm opacity-50 mb-6 italic text-blue-400">Response within 24 hours</p>
+                    <p class="text-lg font-black lowercase">contact@agrihydroponics.com</p>
+                </a>
+                <!-- WeChat -->
+                <div class="bg-white/10 p-10 rounded-2xl border border-white/10 hover:bg-white/20 transition group">
+                    <i class="fab fa-weixin text-5xl mb-6 text-green-500 group-hover:scale-110 transition-transform"></i>
+                    <h5 class="text-xl font-bold mb-2 uppercase italic">WeChat</h5>
+                    <p class="text-sm opacity-50 mb-6 italic text-green-500 uppercase tracking-tighter">Scan to add support</p>
+                    <p class="text-lg font-black uppercase tracking-widest">ID: AgriHydro_Sales</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-gray-950 text-white py-12 text-center border-t border-gray-900">
-        <div class="container mx-auto px-6 text-center opacity-40 text-xs uppercase tracking-widest italic">&copy; 2026 Agri Hydroponics. All rights reserved.</div>
+        <div class="container mx-auto px-6 text-center opacity-30 text-[10px] uppercase tracking-[0.3em] italic">
+            &copy; 2026 Agri Hydroponics. Global Professional Agricultural Solutions Provider.
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -228,6 +322,7 @@
             slides[currentSlide].style.display = 'block';
         }
         function changeSlide(n) { showSlide(currentSlide + n); }
+        // 自动轮播 (5s)
         setInterval(() => changeSlide(1), 5000);
     </script>
 </body>
