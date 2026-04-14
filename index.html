@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 轮播图：100% 完整显示，绝不裁剪文字 */
+        /* 轮播图：100% 完整显示，绝不裁剪 */
         .slide { display: none; width: 100%; }
         .slide.active { display: block; animation: fadeIn 0.8s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0.6; } to { opacity: 1; } }
@@ -38,10 +38,10 @@
         </div>
     </nav>
 
-    <!-- Banner Section (Using <img> for 100% Width & Auto Height) -->
+    <!-- Professional Carousel (Full Width) -->
     <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
         <div class="relative w-full">
-            <img src="banner.jpg" class="slide active" alt="Agri Hydroponics Professional Banner">
+            <img src="banner.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
             <img src="banner2.jpg" class="slide" alt="Professional Greenhouse Systems">
             <img src="banner3.jpg" class="slide" alt="Hydroponic Solutions">
 
@@ -58,44 +58,44 @@
     <section id="solutions" class="py-16 bg-white border-b border-gray-50">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3><p class="text-gray-500 text-sm italic">Direct manufacturing for maximum competitiveness.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">OEM / ODM</h3><p class="text-gray-500 text-sm italic">Customized dimensions & systems for your unique needs.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Global Shipping</h3><p class="text-gray-500 text-sm italic">Professional export logistics to 100+ countries.</p></div>
-                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Technical Support</h3><p class="text-gray-500 text-sm italic">Full guidance from project design to installation.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3><p class="text-gray-500 text-sm">Direct manufacturing for maximum competitiveness.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">OEM / ODM</h3><p class="text-gray-500 text-sm">Customized dimensions & systems for your unique needs.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Global Shipping</h3><p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p></div>
+                <div class="border-l-4 border-green-600 pl-6"><h3 class="text-xl font-bold mb-2 uppercase">Technical Support</h3><p class="text-gray-500 text-sm">Full guidance from project design to installation.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Core Product Solutions (6-Grid Gallery) -->
+    <!-- Core Product Solutions (6-Grid Gallery with Updated Names) -->
     <section id="products" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-4 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
             <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16 text-center"></div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left">
-                <!-- 1. Tower System -->
+                <!-- 1. Hydroponic Tower System -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img src="tower.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"></div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Tower System</h4>
+                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Hydroponic Tower System</h4>
                         <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Vertical farming solutions for high-density commercial production.</p>
                         <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Quote <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-                <!-- 2. NFT System -->
+                <!-- 2. Hydroponic NFT System -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img src="nft.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"></div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">NFT System</h4>
+                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Hydroponic NFT System</h4>
                         <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Industry-standard square NFT channels. UV-resistant and professional-grade.</p>
                         <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Quote <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-                <!-- 3. Dutch Bucket -->
+                <!-- 3. Dutch Bucket System -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img src="dutch-bucket.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"></div>
                     <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Dutch Bucket</h4>
+                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Dutch Bucket System</h4>
                         <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Reliable and efficient systems for vine crops like tomatoes and cucumbers.</p>
                         <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Quote <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
@@ -118,21 +118,5 @@
                         <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Quote <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-                <!-- 6. Ebb & Flow Table -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
-                    <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img src="ebb-flow.jpg" class="w-full h-full object-cover transition duration-500 group-hover:scale-110"></div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold uppercase text-gray-900 mb-3">Ebb & Flow Table</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Automatic tidal irrigation benches for professional nursery production.</p>
-                        <a href="#contact" class="inline-block font-bold text-green-600 hover:text-green-800 border-b-2 border-green-600 pb-1 uppercase text-xs">Request Quote <i class="fas fa-arrow-right ml-1"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Multi-Contact Section (The "Order Hunter") -->
-    <section id="contact" class="py-24 bg-green-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-center">Contact Our Export Experts</h2>
-            <p class="mb-16 opacity-70 text-lg
+                <!-- 6. Ebb and Flow Table -->
+                <div class="bg-white rounded-2xl shadow-lg
