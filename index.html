@@ -1,4 +1,101 @@
-    <!-- Core Product Solutions (6-Grid Professional Layout) -->
+   <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Hydroponics | Professional Tower & Greenhouse Systems Specialist</title>
+    <!-- 使用更适合国内访问的 Tailwind 镜像 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 轮播图核心样式：确保 100% 宽度，高度由图片内容撑开，绝不裁剪 */
+        .slide { 
+            display: none; 
+            width: 100%; 
+        }
+        .slide.active { 
+            display: block; 
+            animation: fadeIn 0.6s ease-in-out; 
+        }
+        @keyframes fadeIn { from { opacity: 0.7; } to { opacity: 1; } }
+
+        /* 防止导航栏遮挡，设置一个基础背景色防止加载时闪烁 */
+        #home { background-color: #f9fafb; position: relative; }
+
+        /* 优化控制按钮：确保在全屏宽度下也能看清 */
+        .carousel-control {
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s;
+        }
+        .carousel-control:hover { background: rgba(0,0,0,0.5); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-leaf text-green-600 text-3xl"></i>
+                <span class="text-2xl font-black tracking-tighter text-green-800 uppercase">Agri Hydro</span>
+            </div>
+            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700 uppercase text-sm tracking-widest">
+                <a href="#home" class="hover:text-green-600 transition">Home</a>
+                <a href="#solutions" class="hover:text-green-600 transition">Solutions</a>
+                <a href="#products" class="hover:text-green-600 transition">Products</a>
+                <a href="#contact" class="bg-green-600 text-white px-8 py-2 rounded-lg hover:bg-green-700 transition shadow-md">Inquiry Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Width Carousel (使用 <img> 标签确保图片和文字 100% 完整) -->
+    <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
+        <div class="relative w-full">
+            <!-- Slide 1 -->
+            <img src="banner1.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
+            <!-- Slide 2 -->
+            <img src="banner2.jpg" class="slide" alt="Agri Hydroponics Banner 2">
+            <!-- Slide 3 -->
+            <img src="banner3.jpg" class="slide" alt="Agri Hydroponics Banner 3">
+
+            <!-- Controls (左箭头) -->
+            <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-left text-xl lg:text-2xl"></i>
+            </button>
+            <!-- Controls (右箭头) -->
+            <button onclick="changeSlide(1)" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-right text-xl lg:text-2xl"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Professional Features -->
+    <section id="solutions" class="py-16 bg-white border-b border-gray-50">
+        <div class="container mx-auto px-6 text-center lg:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3>
+                    <p class="text-gray-500 text-sm">Direct manufacturing eliminates middleman costs.</p>
+                </div>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2 uppercase">OEM / ODM</h3>
+                    <p class="text-gray-500 text-sm">Customized dimensions & systems for your needs.</p>
+                </div>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2 uppercase">Global Shipping</h3>
+                    <p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p>
+                </div>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2 uppercase">Technical Support</h3>
+                    <p class="text-gray-500 text-sm">Full guidance from design to installation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+       <!-- Core Product Solutions (6-Grid Professional Layout) -->
     <section id="products" class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-black mb-4 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
@@ -82,3 +179,45 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Contact -->
+    <section id="contact" class="py-24 bg-green-800 text-white text-center">
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-center">Verified B2B Supplier</h2>
+        <div class="inline-flex flex-col items-center">
+            <a href="mailto:contact@agrihydroponics.com" class="bg-white text-green-900 px-12 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl">Email: contact@agrihydroponics.com</a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-white py-12 text-center border-t border-gray-900">
+        <div class="container mx-auto px-6 text-center opacity-50 text-xs uppercase tracking-widest">
+            &copy; 2026 Agri Hydroponics. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            // 隐藏当前的
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].style.display = 'none';
+            
+            // 计算下一个
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // 显示下一个
+            slides[currentSlide].classList.add('active');
+            slides[currentSlide].style.display = 'block';
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        // 自动轮播 (5秒)
+        setInterval(() => changeSlide(1), 5000);
+    </script>
+
+</body>
+</html>
