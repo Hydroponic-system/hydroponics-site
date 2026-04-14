@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agri Hydroponics | Professional Tower & Greenhouse Systems Specialist</title>
+    <!-- 使用更适合国内访问的 Tailwind 镜像 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 轮播图切换动画 */
-        .slide { display: none; height: 550px; }
-        .slide.active { display: flex; animation: fade 0.8s ease-in-out; }
-        @keyframes fade { from { opacity: 0.4 } to { opacity: 1 } }
+        /* 轮播图核心样式：确保 100% 宽度，高度由图片内容撑开，绝不裁剪 */
+        .slide { 
+            display: none; 
+            width: 100%; 
+        }
+        .slide.active { 
+            display: block; 
+            animation: fadeIn 0.6s ease-in-out; 
+        }
+        @keyframes fadeIn { from { opacity: 0.7; } to { opacity: 1; } }
+
+        /* 防止导航栏遮挡，设置一个基础背景色防止加载时闪烁 */
+        #home { background-color: #f9fafb; position: relative; }
+
+        /* 优化控制按钮：确保在全屏宽度下也能看清 */
+        .carousel-control {
+            background: rgba(0,0,0,0.2);
+            backdrop-filter: blur(4px);
+            transition: all 0.3s;
+        }
+        .carousel-control:hover { background: rgba(0,0,0,0.5); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -31,45 +49,45 @@
         </div>
     </nav>
 
-    <!-- Professional Carousel (Full Brightness & No Text) -->
-    <section id="home" class="relative pt-20 overflow-hidden bg-white">
-        
-        <!-- Slide 1 -->
-        <div class="slide active items-center justify-center relative bg-cover bg-center" style="background-image: url('banner1.jpg');"></div>
+    <!-- Full Width Carousel (使用 <img> 标签确保图片和文字 100% 完整) -->
+    <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
+        <div class="relative w-full">
+            <!-- Slide 1 -->
+            <img src="banner1.jpg" class="slide active" alt="Agri Hydroponics Banner 1">
+            <!-- Slide 2 -->
+            <img src="banner2.jpg" class="slide" alt="Agri Hydroponics Banner 2">
+            <!-- Slide 3 -->
+            <img src="banner3.jpg" class="slide" alt="Agri Hydroponics Banner 3">
 
-        <!-- Slide 2 -->
-        <div class="slide items-center justify-center relative bg-cover bg-center" style="background-image: url('banner2.jpg');"></div>
-
-        <!-- Slide 3 -->
-        <div class="slide items-center justify-center relative bg-cover bg-center" style="background-image: url('banner3.jpg');"></div>
-
-        <!-- Carousel Controls (Darkened slightly for visibility on pure bright images) -->
-        <button onclick="changeSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/10 hover:bg-black/30 p-4 rounded-full text-white z-20 transition">
-            <i class="fas fa-chevron-left text-2xl"></i>
-        </button>
-        <button onclick="changeSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 bg-black/10 hover:bg-black/30 p-4 rounded-full text-white z-20 transition">
-            <i class="fas fa-chevron-right text-2xl"></i>
-        </button>
+            <!-- Controls (左箭头) -->
+            <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-left text-xl lg:text-2xl"></i>
+            </button>
+            <!-- Controls (右箭头) -->
+            <button onclick="changeSlide(1)" class="carousel-control absolute right-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
+                <i class="fas fa-chevron-right text-xl lg:text-2xl"></i>
+            </button>
+        </div>
     </section>
 
-    <!-- Professional Features Section -->
-    <section id="solutions" class="py-20 bg-white border-b border-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Professional Features -->
+    <section id="solutions" class="py-16 bg-white border-b border-gray-50">
+        <div class="container mx-auto px-6 text-center lg:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="border-l-4 border-green-600 pl-6">
-                    <h3 class="text-xl font-bold mb-2">Factory Price</h3>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Factory Price</h3>
                     <p class="text-gray-500 text-sm">Direct manufacturing eliminates middleman costs.</p>
                 </div>
                 <div class="border-l-4 border-green-600 pl-6">
-                    <h3 class="text-xl font-bold mb-2">OEM / ODM</h3>
+                    <h3 class="text-xl font-bold mb-2 uppercase">OEM / ODM</h3>
                     <p class="text-gray-500 text-sm">Customized dimensions & systems for your needs.</p>
                 </div>
                 <div class="border-l-4 border-green-600 pl-6">
-                    <h3 class="text-xl font-bold mb-2">Global Shipping</h3>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Global Shipping</h3>
                     <p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p>
                 </div>
                 <div class="border-l-4 border-green-600 pl-6">
-                    <h3 class="text-xl font-bold mb-2">Technical Support</h3>
+                    <h3 class="text-xl font-bold mb-2 uppercase">Technical Support</h3>
                     <p class="text-gray-500 text-sm">Full guidance from design to installation.</p>
                 </div>
             </div>
@@ -77,36 +95,36 @@
     </section>
 
     <!-- Product Grid -->
-    <section id="products" class="py-24 bg-gray-50">
+    <section id="products" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Core Product Solutions</h2>
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tight text-gray-900">Core Product Solutions</h2>
             <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16"></div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
                 <!-- Hydroponic Tower -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-tower-observation text-8xl text-green-600 transition group-hover:scale-110"></i></div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-4">Hydroponic Towers</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Vertical farming solutions. Perfect for high-density commercial production.</p>
-                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Hydroponic Towers</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Vertical farming solutions. Perfect for commercial production.</p>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
                 <!-- NFT Channel -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
                     <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-vial text-8xl text-green-600 transition group-hover:scale-110"></i></div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-4">NFT Square Tubes</h4>
+                        <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter">NFT Systems</h4>
                         <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Industry-standard NFT channels. UV-resistant and long-lasting.</p>
-                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
-                <!-- Ebb & Flow -->
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
-                    <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-table-list text-8xl text-green-600 transition group-hover:scale-110"></i></div>
+                <!-- Greenhouse -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group transition hover:shadow-2xl">
+                    <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-house-chimney-window text-8xl text-green-600 transition group-hover:scale-110"></i></div>
                     <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-4">Tidal Seedbeds</h4>
-                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Automatic ebb & flow systems for professional nursery propagation.</p>
-                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        <h4 class="text-2xl font-bold mb-4 uppercase tracking-tighter text-green-800">Greenhouse</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed italic">Advanced climate-controlled greenhouse structures worldwide.</p>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800 uppercase text-xs tracking-widest">Inquiry Now <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -115,17 +133,15 @@
 
     <!-- Footer Contact -->
     <section id="contact" class="py-24 bg-green-800 text-white text-center">
-        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">GET WHOLESALE PRICE LIST</h2>
-        <p class="mb-10 opacity-80 text-lg">Send us an inquiry and our experts will contact you within 24 hours.</p>
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter text-center">Verified B2B Supplier</h2>
         <div class="inline-flex flex-col items-center">
             <a href="mailto:contact@agrihydroponics.com" class="bg-white text-green-900 px-12 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl">Email: contact@agrihydroponics.com</a>
-            <p class="mt-8 text-sm opacity-60 italic text-white/70">Your Reliable Partner in Greenhouse Systems</p>
         </div>
     </section>
 
-    <footer class="bg-gray-950 text-white py-12 border-t border-gray-900 text-center">
-        <div class="container mx-auto px-6 text-center opacity-50 text-sm">
-            &copy; 2026 Agri Hydroponics. All rights reserved. Professional Grade Agricultural Solutions.
+    <footer class="bg-gray-950 text-white py-12 text-center border-t border-gray-900">
+        <div class="container mx-auto px-6 text-center opacity-50 text-xs uppercase tracking-widest">
+            &copy; 2026 Agri Hydroponics. All rights reserved.
         </div>
     </footer>
 
@@ -134,16 +150,23 @@
         const slides = document.querySelectorAll('.slide');
 
         function showSlide(n) {
+            // 隐藏当前的
             slides[currentSlide].classList.remove('active');
+            slides[currentSlide].style.display = 'none';
+            
+            // 计算下一个
             currentSlide = (n + slides.length) % slides.length;
+            
+            // 显示下一个
             slides[currentSlide].classList.add('active');
+            slides[currentSlide].style.display = 'block';
         }
 
         function changeSlide(n) {
             showSlide(currentSlide + n);
         }
 
-        // 自动轮播 (5秒切换一次)
+        // 自动轮播 (5秒)
         setInterval(() => changeSlide(1), 5000);
     </script>
 
