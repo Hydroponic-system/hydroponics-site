@@ -7,177 +7,162 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .gradient-green { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
-        .hero-image { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('banner.jpg'); background-size: cover; background-position: center; }
+        /* 轮播图切换动画 */
+        .slide { display: none; height: 550px; }
+        .slide.active { display: flex; animation: fade 0.8s ease-in-out; }
+        @keyframes fade { from { opacity: 0.4 } to { opacity: 1 } }
+        .bg-overlay { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <!-- Header & Navigation -->
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-leaf text-green-600 text-3xl"></i>
                 <span class="text-2xl font-black tracking-tighter text-green-800 uppercase">Agri Hydro</span>
             </div>
-            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700">
+            <div class="hidden lg:flex space-x-8 font-semibold text-gray-700 uppercase text-sm tracking-widest">
                 <a href="#home" class="hover:text-green-600 transition">Home</a>
                 <a href="#solutions" class="hover:text-green-600 transition">Solutions</a>
-                <a href="#products" class="hover:text-green-600 transition">Catalog</a>
-                <a href="#contact" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition shadow-lg">Inquiry Now</a>
+                <a href="#products" class="hover:text-green-600 transition">Products</a>
+                <a href="#contact" class="bg-green-600 text-white px-8 py-2 rounded-lg hover:bg-green-700 transition shadow-md">Inquiry Now</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-image h-screen flex items-center justify-center text-white pt-20">
-        <div class="text-center px-6 max-w-4xl">
-            <span class="inline-block bg-green-600 text-xs font-bold px-4 py-1 rounded-full mb-4 uppercase tracking-widest">Global Export Partner</span>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">Advanced Hydroponic <br><span class="text-green-400">Greenhouse Systems</span></h1>
-            <p class="text-lg md:text-xl mb-10 opacity-90 leading-relaxed">High-yield vertical farming solutions for commercial growers worldwide. We provide complete OEM/ODM services for hydroponic tower and greenhouse structures.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-white text-green-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 shadow-2xl transition-all">Get a Free Quotation</a>
-                <a href="#products" class="border-2 border-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">View Catalog</a>
+    <!-- Professional Carousel (Height: 550px) -->
+    <section id="home" class="relative pt-20 overflow-hidden bg-gray-900">
+        
+        <!-- Slide 1: Hydroponic Tower (使用你昨天上传的 banner.jpg) -->
+        <div class="slide active items-center justify-center relative bg-cover bg-center" style="background-image: url('banner.jpg');">
+            <div class="absolute inset-0 bg-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10 text-white text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter">Vertical Tower Systems</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Patented Aeroponic Designs for Commercial Vertical Farming.</p>
+                <a href="#contact" class="bg-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition inline-block">Request Quote</a>
             </div>
         </div>
+
+        <!-- Slide 2: Greenhouse (建议以后换成 greenhouse.jpg) -->
+        <div class="slide items-center justify-center relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1585059895312-5e6301c5129d?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10 text-white text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter">Commercial Greenhouse</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">Complete Engineering & Climate Control Solutions for All Crops.</p>
+                <a href="#contact" class="bg-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition inline-block">Get Solution</a>
+            </div>
+        </div>
+
+        <!-- Slide 3: NFT Systems (建议以后换成 nft.jpg) -->
+        <div class="slide items-center justify-center relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-overlay"></div>
+            <div class="container mx-auto px-6 relative z-10 text-white text-center">
+                <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter">Advanced NFT Systems</h2>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">High-Performance Square Tube Solutions for Leafy Greens.</p>
+                <a href="#contact" class="bg-green-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-green-700 transition inline-block">View Details</a>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button onclick="changeSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 p-4 rounded-full text-white z-20 transition">
+            <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        <button onclick="changeSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/30 p-4 rounded-full text-white z-20 transition">
+            <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
     </section>
 
-    <!-- Key Advantages (B2B Focus) -->
-    <section id="solutions" class="py-24 bg-white">
+    <!-- Professional Features Section (Industrial Style) -->
+    <section id="solutions" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-gray-900 mb-4 uppercase tracking-tight">Why Professional Growers Choose Us?</h2>
-                <div class="h-1.5 w-24 bg-green-600 mx-auto rounded-full"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl transition">
-                    <div class="bg-green-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-green-600">
-                        <i class="fas fa-chart-line text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">3x Higher Yield</h3>
-                    <p class="text-gray-600">Maximize your vertical space with our patented tower designs, delivering up to 300% more produce per square foot.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2">Factory Price</h3>
+                    <p class="text-gray-500 text-sm">Direct manufacturing eliminates middleman costs.</p>
                 </div>
-                <div class="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl transition">
-                    <div class="bg-green-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-green-600">
-                        <i class="fas fa-droplet text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">90% Water Savings</h3>
-                    <p class="text-gray-600">Our closed-loop NFT and tower systems minimize evaporation and recycle nutrient solutions efficiently.</p>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2">OEM / ODM</h3>
+                    <p class="text-gray-500 text-sm">Customized dimensions & systems for your needs.</p>
                 </div>
-                <div class="text-center p-8 rounded-3xl bg-gray-50 border border-gray-100 hover:shadow-2xl transition">
-                    <div class="bg-green-100 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-green-600">
-                        <i class="fas fa-microchip text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Smart Automation</h3>
-                    <p class="text-gray-600">Fully integrated greenhouse climate control and nutrient dosing systems for 24/7 autonomous farming.</p>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2">Global Shipping</h3>
+                    <p class="text-gray-500 text-sm">Professional export logistics to 100+ countries.</p>
+                </div>
+                <div class="border-l-4 border-green-600 pl-6">
+                    <h3 class="text-xl font-bold mb-2">Technical Support</h3>
+                    <p class="text-gray-500 text-sm">Full guidance from design to installation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Showcase (Catalog) -->
+    <!-- Product Grid (As you requested) -->
     <section id="products" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black text-center mb-16 uppercase tracking-tight text-gray-900">Commercial Solutions Catalog</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Hydroponic Tower -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-tower-observation text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">Vertical Tower Systems</h3>
-                        <p class="text-gray-500 mb-6">Patent-designed for commercial vertical farming. Durable food-grade material.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <!-- NFT Square Tube -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-vial text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">NFT Channel Systems</h3>
-                        <p class="text-gray-500 mb-6">High-performance square tubes for leafy greens. UV-resistant and long lifespan.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <!-- Dutch Bucket -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-bucket text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">Dutch Bucket Systems</h3>
-                        <p class="text-gray-500 mb-6">The industry standard for tomatoes, cucumbers, and other vine crops.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <!-- Nursery Trays -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-seedling text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">Seedling Trays & Kits</h3>
-                        <p class="text-gray-500 mb-6">Professional germination trays for optimized seedling growth rates.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <!-- Flood Table -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-table-list text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">Ebb and Flow Tables</h3>
-                        <p class="text-gray-600 mb-6 font-medium">Tidal seedbeds for uniform irrigation and massive propagation.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-                <!-- Greenhouse Structure -->
-                <div class="group bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
-                    <div class="h-64 bg-green-100 flex items-center justify-center overflow-hidden">
-                        <i class="fas fa-house-chimney-window text-8xl text-green-600 group-hover:scale-110 transition duration-500"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold mb-2">Greenhouse Structures</h3>
-                        <p class="text-gray-600 mb-6 font-medium">Multi-span film, PC, and glass greenhouses for commercial scaling.</p>
-                        <a href="#contact" class="text-green-600 font-bold flex items-center group-hover:gap-2 transition-all">Get Details <i class="fas fa-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final Call to Action -->
-    <section id="contact" class="py-24 gradient-green text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-black mb-8 uppercase tracking-tighter">Ready to Scale Your Agribusiness?</h2>
-            <p class="text-xl mb-12 opacity-90 max-w-2xl mx-auto">Get a personalized project proposal and wholesale pricing for your hydroponic greenhouse system today.</p>
-            <div class="bg-white/10 backdrop-blur-md p-10 rounded-3xl border border-white/20 inline-block max-w-2xl w-full">
-                <div class="text-3xl font-bold mb-2">Request Wholesale Price List</div>
-                <div class="text-green-300 text-sm mb-8 tracking-widest uppercase">Verified B2B Supplier</div>
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="mailto:contact@agrihydroponics.com" class="bg-white text-green-800 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition">Email: agrihydroponics.com</a>
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tight">Core Product Solutions</h2>
+            <div class="h-1.5 w-20 bg-green-600 mx-auto rounded-full mb-16"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Hydroponic Tower -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                    <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-tower-observation text-8xl text-green-600 transition group-hover:scale-110"></i></div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-4">Hydroponic Towers</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed">High-density vertical farming. Perfect for strawberries and leafy greens.</p>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
                 </div>
-                <p class="mt-6 text-sm opacity-60">* Custom OEM/ODM designs available for large-scale commercial projects.</p>
+                <!-- NFT Channel -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                    <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-vial text-8xl text-green-600 transition group-hover:scale-110"></i></div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-4">NFT Square Tubes</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed">Industry-standard NFT channels. UV-resistant and long-lasting.</p>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Ebb & Flow -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 group">
+                    <div class="h-64 bg-green-50 flex items-center justify-center"><i class="fas fa-table-list text-8xl text-green-600 transition group-hover:scale-110"></i></div>
+                    <div class="p-8">
+                        <h4 class="text-2xl font-bold mb-4">Tidal Seedbeds</h4>
+                        <p class="text-gray-500 mb-6 text-sm leading-relaxed">Automatic ebb & flow systems for professional nursery propagation.</p>
+                        <a href="#contact" class="font-bold text-green-600 hover:text-green-800">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-white py-12 border-t border-gray-900">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center space-x-2 mb-6 md:mb-0">
-                <i class="fas fa-leaf text-green-500 text-2xl"></i>
-                <span class="text-xl font-black uppercase tracking-tighter">Agri Hydro</span>
-            </div>
-            <div class="text-sm opacity-50">
-                &copy; 2026 Agri Hydroponics. All rights reserved. Professional Grade Agricultural Solutions.
-            </div>
+    <!-- Footer Contact -->
+    <section id="contact" class="py-24 bg-green-800 text-white text-center">
+        <h2 class="text-4xl font-black mb-8">GET WHOLESALE PRICE LIST</h2>
+        <p class="mb-10 opacity-80 text-lg">Send us an inquiry and our experts will contact you within 24 hours.</p>
+        <div class="inline-flex flex-col items-center">
+            <a href="mailto:contact@agrihydroponics.com" class="bg-white text-green-900 px-12 py-4 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-2xl">contact@agrihydroponics.com</a>
+            <p class="mt-8 text-sm opacity-60 italic">Your Reliable Partner in Greenhouse Systems</p>
         </div>
-    </footer>
+    </section>
+
+    <script>
+        // 轮播图控制脚本
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide + n);
+        }
+
+        // 自动轮播 (5秒切换一次)
+        setInterval(() => changeSlide(1), 5000);
+    </script>
 
 </body>
 </html>
