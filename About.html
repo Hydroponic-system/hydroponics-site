@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Agri Hydroponics - Professional Agri-Tech Manufacturer</title>
+    <title>About Us | Agri Hydroponics - Global Agri-Tech Leaders</title>
+    <meta name="description" content="Learn about Agri Hydroponics, a leading manufacturer of professional hydroponic systems and greenhouse solutions since 2016. Exporting to 100+ countries.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans leading-normal">
 
-    <!-- Navigation -->
+    <!-- 1. Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-gray-600">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-leaf text-green-600 text-3xl"></i>
                 <a href="index.html" class="text-2xl font-black tracking-tighter text-gray-900 uppercase">
                     Agri <span class="text-green-600">Hydro</span><span class="text-gray-400 font-light lowercase">ponics</span>
                 </a>
             </div>
-            <div class="hidden lg:flex space-x-8 font-bold text-gray-600 uppercase text-xs tracking-widest items-center">
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
                 <a href="index.html" class="hover:text-green-600 transition">Home</a>
                 <a href="About.html" class="text-green-600 transition border-b-2 border-green-600">About Us</a>
-                <a href="index.html#products" class="hover:text-green-600 transition">Products</a>
                 <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
+                
+                <!-- Products Dropdown -->
+                <div class="relative group h-full py-4">
+                    <button class="hover:text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em]">
+                        Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="TowerSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Tower System</a>
+                        <a href="NFTSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">NFT System</a>
+                        <a href="DutchBucket.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Dutch Bucket</a>
+                        <a href="Greenhouse.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Greenhouse</a>
+                        <a href="SeedlingTray.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Seedling Tray</a>
+                        <a href="EbbFlow.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Ebb & Flow</a>
+                    </div>
+                </div>
+
                 <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase">Contact</a>
             </div>
         </div>
