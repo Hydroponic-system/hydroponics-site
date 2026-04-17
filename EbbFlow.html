@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebb and Flow Tables | Tidal Bench Systems | Agri Hydroponics</title>
+    <title>Ebb & Flow Tables | Tidal Bench Systems | Agri Hydroponics</title>
     <meta name="description" content="Automatic ebb and flow tidal irrigation benches for professional nurseries. Optimized water distribution and efficient drainage for greenhouse propagation.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans leading-normal">
 
-    <!-- Navigation -->
+    <!-- 1. Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center text-gray-600">
             <div class="flex items-center space-x-2">
@@ -22,34 +22,93 @@
             <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
                 <a href="index.html" class="hover:text-green-600 transition">Home</a>
                 <a href="About.html" class="hover:text-green-600 transition">About Us</a>
-                <a href="index.html#products" class="text-green-600 transition border-b-2 border-green-600">Products</a>
+                <div class="relative group h-full py-4">
+                    <button class="text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em] border-b-2 border-green-600">
+                        Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="TowerSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Tower System</a>
+                        <a href="NFTSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">NFT System</a>
+                        <a href="DutchBucket.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Dutch Bucket</a>
+                        <a href="Greenhouse.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Greenhouse</a>
+                        <a href="SeedlingTray.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Seedling Tray</a>
+                        <a href="EbbFlow.html" class="block px-6 py-2.5 text-green-600 bg-green-50 transition text-[10px] font-black uppercase tracking-widest">Ebb & Flow</a>
+                    </div>
+                </div>
+                <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>green-600">
+                        Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="TowerSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Tower System</a>
+                        <a href="NFTSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">NFT System</a>
+                        <a href="DutchBucket.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Dutch Bucket</a>
+                        <a href="Greenhouse.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Greenhouse</a>
+                        <a href="SeedlingTray.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Seedling Tray</a>
+                        <a href="EbbFlow.html" class="block px-6 py-2.5 text-green-600 bg-green-50 transition text-[10px] font-black uppercase tracking-widest">Ebb & Flow</a>
+                    </div>
+                </div>
+
                 <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase tracking-widest">Get Quote</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white">
-        <div class="container mx-auto px-6 flex flex-col lg:row items-center gap-16">
-            <div class="lg:w-1/2">
-                <h1 class="text-5xl font-black uppercase tracking-tighter mb-6 leading-none text-gray-900">
-                    Ebb & <span class="text-green-600">Flow</span> <br>Tidal Benches
-                </h1>
-                <p class="text-xl text-gray-500 italic mb-8 leading-relaxed">
-                    Automated tidal irrigation systems provide the most efficient way to manage massive quantities of seedling and potted plants. Our tables ensure perfectly uniform nutrient distribution with 100% water recovery.
-                </p>
-                <div class="flex flex-wrap gap-4 mb-10">
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">UV Stabilized Trays</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Aluminum Structures</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Zero Waste</span>
+    <!-- Technical Specs Grid -->
+    <section class="py-24 bg-gray-50 border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-black text-center uppercase tracking-tighter mb-16">Technical Specifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Tray Material</p>
+                    <p class="text-lg font-bold italic text-gray-900">UV High-Impact PS</p>
                 </div>
-                <a href="Inquiry.html" class="inline-block bg-gray-900 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Inquiry Today</a>
-            </div>
-            <div class="lg:w-1/2 relative group">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50 bg-white transform group-hover:scale-[1.02] transition-transform duration-700">
-                    <img src="ebb and flow table.jpg" alt="Agri Hydroponics Ebb and Flow" class="w-full h-auto object-cover">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Bench Frame</p>
+                    <p class="text-lg font-bold italic text-gray-900">Aluminum Alloy</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Load Capacity</p>
+                    <p class="text-lg font-bold italic text-gray-900">70 kg / m²</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Irrigation Type</p>
+                    <p class="text-lg font-bold italic text-gray-900">Automatic Tidal</p>
                 </div>
             </div>
+            
+            <!-- Features Detail -->
+            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-arrows-alt-h text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Rolling Benches</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">Increase your greenhouse efficiency by up to 30%. Side-rolling benches allow for a single aisle, maximizing growing area.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tint text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Uniform Watering</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">Tidal sub-irrigation ensures every single plant receives the exact same amount of nutrient solution, resulting in perfect crop uniformity.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Disease Prevention</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">By watering from below, leaves stay dry, significantly reducing the risk of fungal diseases and pests in high-humidity greenhouses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-green-950 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-8">Optimize Your Greenhouse Space</h2>
+            <p class="opacity-60 max-w-2xl mx-auto italic mb-12">Custom sizes and rolling configurations available. Contact our engineers for a professional tidal bench layout.</p>
+            <a href="Inquiry.html" class="inline-block bg-green-600 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-700 transition shadow-2xl">Get Technical Layout</a>
         </div>
     </section>
 
