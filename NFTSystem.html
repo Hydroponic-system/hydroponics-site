@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT Channel System | Leafy Green Solutions | Agri Hydroponics</title>
-    <meta name="description" content="Commercial NFT (Nutrient Film Technique) hydroponic systems for leafy greens. UV-resistant PVC-U channels, automatic irrigation, and high-efficiency circulation.">
+    <title>NFT Hydroponic System | Professional Leafy Green Solutions | Agri Hydroponics</title>
+    <meta name="description" content="Commercial NFT (Nutrient Film Technique) hydroponic channels. Ideal for lettuce, herbs, and leafy greens. High-efficiency nutrient delivery for maximum yield.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-normal">
+<body class="bg-white text-gray-900 selection:bg-green-100">
 
     <!-- 1. Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
@@ -19,7 +23,7 @@
                     Agri <span class="text-green-600">Hydro</span><span class="text-gray-400 font-light lowercase">ponics</span>
                 </a>
             </div>
-            <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-[10px] tracking-widest items-center">
                 <a href="index.html" class="hover:text-green-600 transition">Home</a>
                 <a href="About.html" class="hover:text-green-600 transition">About Us</a>
                 <div class="relative group h-full py-4">
@@ -36,152 +40,338 @@
                     </div>
                 </div>
                 <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
-
-                <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase tracking-widest">Get Quote</a>
+                <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 flex flex-col lg:row items-center gap-16">
-            <div class="lg:w-1/2">
-                <h1 class="text-5xl font-black uppercase tracking-tighter mb-6 leading-none text-gray-900">
-                    Commercial <span class="text-green-600">NFT</span> <br>Channel System
-                </h1>
-                <p class="text-xl text-gray-500 italic mb-8 leading-relaxed">
-                    The Nutrient Film Technique (NFT) is the industry standard for large-scale leafy green production. Our UV-resistant channels ensure maximum oxygenation and nutrient delivery for fast, healthy growth.
-                </p>
-                <div class="flex flex-wrap gap-4 mb-10">
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">UV Stabilized PVC-U</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Patent Leak-Proof Design</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">High ROI</span>
-                </div>
-                <a href="Inquiry.html" class="inline-block bg-gray-900 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Inquiry Today</a>
-            </div>
-            <div class="lg:w-1/2 relative group">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50 bg-white transform group-hover:scale-[1.02] transition-transform duration-700">
-                    <img src="hydroponic nft system.jpg" alt="Agri Hydroponics NFT System" class="w-full h-auto object-cover">
-                </div>
-                <div class="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
-                        <i class="fas fa-microscope text-green-600"></i>
+    <!-- SECTION 1: PRODUCT HERO (B2B STYLE) -->
+    <header class="pt-24 bg-white">
+        <div class="container mx-auto px-6 py-4">
+            <!-- Breadcrumbs -->
+            <nav class="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-8 flex items-center space-x-2">
+                <a href="index.html" class="hover:text-green-600 transition">Home</a>
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                <a href="NFTSystem.html" class="hover:text-green-600 transition">Products</a>
+                <i class="fas fa-chevron-right text-[8px]"></i>
+                <span class="text-gray-900">Hydroponic NFT System</span>
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Left: Image Gallery -->
+                <div class="space-y-4">
+                    <div class="aspect-square rounded-[2rem] overflow-hidden bg-gray-50 border border-gray-100 group">
+                        <img id="main-product-img" src="https://sc02.alicdn.com/kf/A369796e6c1e54911ac29729868731b81e.png" alt="NFT Hydroponic System" class="w-full h-full object-cover transition duration-700">
                     </div>
-                    <div>
-                        <p class="text-[10px] uppercase font-bold text-gray-400">Nutrient Efficiency</p>
-                        <p class="text-xl font-black text-gray-900">99.5%</p>
+                    <div class="grid grid-cols-4 gap-4">
+                        <button onclick="updateImage('https://sc02.alicdn.com/kf/A369796e6c1e54911ac29729868731b81e.png')" class="aspect-square rounded-xl overflow-hidden border-2 border-green-600">
+                            <img src="https://sc02.alicdn.com/kf/A369796e6c1e54911ac29729868731b81e.png" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="updateImage('https://sc01.alicdn.com/kf/He5fa08d488e34894957f8644538806655.jpg')" class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-green-600 transition">
+                            <img src="https://sc01.alicdn.com/kf/He5fa08d488e34894957f8644538806655.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="updateImage('https://sc01.alicdn.com/kf/H074c65e8d89e47269176378e91f165e3F.jpg')" class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-green-600 transition">
+                            <img src="https://sc01.alicdn.com/kf/H074c65e8d89e47269176378e91f165e3F.jpg" class="w-full h-full object-cover">
+                        </button>
+                        <button onclick="updateImage('https://sc01.alicdn.com/kf/H461168018e6e44b88497672909403d7e5.jpg')" class="aspect-square rounded-xl overflow-hidden border-2 border-transparent hover:border-green-600 transition">
+                            <img src="https://sc01.alicdn.com/kf/H461168018e6e44b88497672909403d7e5.jpg" class="w-full h-full object-cover">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Product Specs Brief -->
+                <div class="flex flex-col">
+                    <h1 class="text-3xl lg:text-4xl font-black uppercase tracking-tighter mb-6 text-gray-900 leading-tight">Commercial NFT Hydroponic Channel System <span class="text-green-600">for Leafy Greens</span></h1>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center space-x-4 pb-4 border-b border-gray-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 w-24">Model:</span>
+                            <span class="text-sm font-bold italic">AH-NFT-100x50</span>
+                        </div>
+                        <div class="flex items-center space-x-4 pb-4 border-b border-gray-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 w-24">Material:</span>
+                            <span class="text-sm font-bold italic">Food Grade PVC (UV Resistant)</span>
+                        </div>
+                        <div class="flex items-center space-x-4 pb-4 border-b border-gray-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 w-24">Structure:</span>
+                            <span class="text-sm font-bold italic">A-Frame / Flat Bed / Vertical</span>
+                        </div>
+                        <div class="flex items-center space-x-4 pb-4 border-b border-gray-100">
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 w-24">Lead Time:</span>
+                            <span class="text-sm font-bold italic text-green-600">10-20 Working Days</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 mb-10">
+                        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 mb-4 italic">B2B Wholesale Price Range</p>
+                        <div class="flex items-baseline space-x-2">
+                            <span class="text-4xl font-black text-gray-900 tracking-tighter">Get Latest Quote</span>
+                        </div>
+                        <p class="text-[10px] text-gray-400 mt-2 uppercase tracking-widest">* Custom sizes and configurations available</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#inquiry" class="bg-green-600 text-white text-center font-black uppercase tracking-widest py-5 rounded-xl hover:bg-green-700 transition shadow-xl">Send Inquiry</a>
+                        <a href="https://wa.me/8613592607568" class="bg-gray-900 text-white text-center font-black uppercase tracking-widest py-5 rounded-xl hover:bg-black transition shadow-xl flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat Now
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Technical Specs Grid -->
-    <section class="py-24 bg-gray-50 border-y border-gray-100">
+    <!-- MAIN CONTENT AREA (WITH SIDEBAR) -->
+    <div class="container mx-auto px-6 py-24">
+        <div class="flex flex-col lg:flex-row gap-16">
+            <!-- Left Sidebar: Product Navigation -->
+            <aside class="lg:w-1/4 hidden lg:block">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white border border-gray-100 rounded-3xl shadow-sm overflow-hidden">
+                        <h3 class="bg-gray-900 text-white px-8 py-5 text-xs font-black uppercase tracking-[0.3em]">Product Categories</h3>
+                        <div class="p-4">
+                            <ul class="space-y-1">
+                                <li><a href="TowerSystem.html" class="block px-6 py-3 text-gray-400 hover:bg-gray-50 hover:text-green-600 transition font-bold uppercase text-[10px] tracking-widest rounded-xl">Hydroponic Tower</a></li>
+                                <li><a href="NFTSystem.html" class="block px-6 py-3 bg-green-50 text-green-600 font-bold uppercase text-[10px] tracking-widest rounded-xl">NFT Channel System</a></li>
+                                <li><a href="DutchBucket.html" class="block px-6 py-3 text-gray-400 hover:bg-gray-50 hover:text-green-600 transition font-bold uppercase text-[10px] tracking-widest rounded-xl">Dutch Bucket System</a></li>
+                                <li><a href="Greenhouse.html" class="block px-6 py-3 text-gray-400 hover:bg-gray-50 hover:text-green-600 transition font-bold uppercase text-[10px] tracking-widest rounded-xl">Commercial Greenhouse</a></li>
+                                <li><a href="SeedlingTray.html" class="block px-6 py-3 text-gray-400 hover:bg-gray-50 hover:text-green-600 transition font-bold uppercase text-[10px] tracking-widest rounded-xl">Seedling Trays</a></li>
+                                <li><a href="EbbFlow.html" class="block px-6 py-3 text-gray-400 hover:bg-gray-50 hover:text-green-600 transition font-bold uppercase text-[10px] tracking-widest rounded-xl">Ebb & Flow Table</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trust Card -->
+                    <div class="bg-green-600 rounded-[2rem] p-8 text-white relative overflow-hidden group">
+                        <i class="fas fa-shield-alt absolute -bottom-4 -right-4 text-white/10 text-9xl group-hover:scale-110 transition duration-700"></i>
+                        <h4 class="text-xl font-black uppercase tracking-tighter mb-4 relative z-10 leading-none">Factory <br>Direct Supply</h4>
+                        <p class="text-white/60 text-[10px] uppercase tracking-widest font-bold mb-8 relative z-10 italic">Global Logistics & Technical Support.</p>
+                        <a href="About.html" class="bg-white text-green-600 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-gray-900 hover:text-white transition relative z-10">Learn More</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Content: Product Details -->
+            <div class="lg:w-3/4 space-y-24">
+                
+                <!-- SECTION 2: INTRODUCTION & ADVANTAGES -->
+                <section id="details">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-12 flex items-center">
+                        <span class="w-12 h-1 bg-green-600 mr-4"></span> Product Description
+                    </h2>
+                    <div class="space-y-6 mb-16">
+                        <h3 class="text-xl font-black uppercase tracking-tighter text-gray-900">High-Performance NFT Solution</h3>
+                        <p class="text-gray-500 italic text-lg leading-relaxed">NFT (Nutrient Film Technique) is the most popular hydroponic method for commercial leafy green production. Our professional-grade PVC channels are designed with a unique "Nutrient Film" profile to ensure optimal root aeration and nutrient uptake.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <li class="flex items-center space-x-3 text-sm font-bold text-gray-600">
+                                <i class="fas fa-check-circle text-green-600"></i> <span>UV-Stabilized Food Grade PVC</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm font-bold text-gray-600">
+                                <i class="fas fa-check-circle text-green-600"></i> <span>Optimized "Flat-Bottom" Design</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm font-bold text-gray-600">
+                                <i class="fas fa-check-circle text-green-600"></i> <span>Scalable A-Frame Structures</span>
+                            </li>
+                            <li class="flex items-center space-x-3 text-sm font-bold text-gray-600">
+                                <i class="fas fa-check-circle text-green-600"></i> <span>Professional Drainage Endcaps</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="https://sc01.alicdn.com/kf/He5fa08d488e34894957f8644538806655.jpg" alt="NFT System Installation" class="w-full rounded-[2.5rem] shadow-2xl border-4 border-white">
+                </section>
+
+                <!-- SECTION 3: TECHNICAL PARAMETERS -->
+                <section id="specs" class="scroll-mt-32">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-12 flex items-center">
+                        <span class="w-12 h-1 bg-green-600 mr-4"></span> Technical Parameters
+                    </h2>
+                    <div class="bg-gray-50 rounded-[2rem] overflow-hidden border border-gray-100 shadow-sm mb-12">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-gray-900 text-white text-[10px] font-black uppercase tracking-[0.3em]">
+                                <tr>
+                                    <th class="px-8 py-5 border-b border-gray-800">Channel Size</th>
+                                    <th class="px-8 py-5 border-b border-gray-800">Hole Spacing</th>
+                                    <th class="px-8 py-5 border-b border-gray-800">Material Thickness</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="hover:bg-green-50 transition border-b border-gray-100">
+                                    <td class="px-8 py-5 font-bold uppercase tracking-widest">100 x 50 mm</td>
+                                    <td class="px-8 py-5 italic">200 mm / 250 mm</td>
+                                    <td class="px-8 py-5 italic">2.0 mm / 2.5 mm</td>
+                                </tr>
+                                <tr class="hover:bg-green-50 transition border-b border-gray-100">
+                                    <td class="px-8 py-5 font-bold uppercase tracking-widest">100 x 100 mm</td>
+                                    <td class="px-8 py-5 italic">250 mm / 300 mm</td>
+                                    <td class="px-8 py-5 italic">2.5 mm / 3.0 mm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <img src="https://sc01.alicdn.com/kf/H074c65e8d89e47269176378e91f165e3F.jpg" alt="Technical Drawing" class="mx-auto rounded-3xl shadow-lg border-2 border-white">
+                </section>
+
+                <!-- SECTION 4: APPLICATION SCENARIO -->
+                <section id="scenarios" class="scroll-mt-32">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-12 flex items-center">
+                        <span class="w-12 h-1 bg-green-600 mr-4"></span> Global Case Studies
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="group relative rounded-[2rem] overflow-hidden shadow-xl h-80">
+                            <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+                                <h4 class="text-white font-black uppercase tracking-tight text-lg">Hydroponic Lettuce Factory</h4>
+                            </div>
+                        </div>
+                        <div class="group relative rounded-[2rem] overflow-hidden shadow-xl h-80">
+                            <img src="https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-8">
+                                <h4 class="text-white font-black uppercase tracking-tight text-lg">Smart Herb Garden</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://sc01.alicdn.com/kf/H461168018e6e44b88497672909403d7e5.jpg" alt="Project Visual" class="w-full block rounded-[2.5rem] shadow-lg">
+                </section>
+
+                <!-- SECTION 7: INQUIRY FORM -->
+                <section id="inquiry" class="scroll-mt-32">
+                    <div class="bg-gray-900 p-12 rounded-[3rem] shadow-2xl relative overflow-hidden group">
+                        <i class="fas fa-paper-plane absolute -bottom-8 -right-8 text-white/5 text-9xl group-hover:scale-110 transition duration-700"></i>
+                        <div class="relative z-10">
+                            <h2 class="text-3xl font-black text-white uppercase tracking-tighter mb-8 leading-none">Request a Commercial <br><span class="text-green-500">NFT Proposal</span></h2>
+                            <form action="#" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <input type="text" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white text-sm outline-none focus:border-green-500 transition">
+                                    <input type="text" placeholder="Company Name" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white text-sm outline-none focus:border-green-500 transition">
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <input type="email" placeholder="Business Email" class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white text-sm outline-none focus:border-green-500 transition">
+                                    <div class="flex">
+                                        <select class="bg-white/5 border border-white/10 border-r-0 rounded-l-xl px-4 text-white/40 text-xs outline-none focus:border-green-500 transition appearance-none cursor-pointer">
+                                            <option value="+86">+86</option>
+                                            <option value="+1">+1</option>
+                                            <option value="+44">+44</option>
+                                        </select>
+                                        <input type="tel" placeholder="WhatsApp Number" class="w-full bg-white/5 border border-white/10 rounded-r-xl px-6 py-4 text-white text-sm outline-none focus:border-green-500 transition">
+                                    </div>
+                                </div>
+                                <textarea rows="4" placeholder="Briefly describe your project area and crop goals..." class="w-full bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white text-sm outline-none focus:border-green-500 transition"></textarea>
+                                <button type="submit" class="w-full bg-green-600 text-white font-black uppercase tracking-widest py-5 rounded-xl hover:bg-green-700 transition shadow-xl">Get Technical Quote</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 8: RELATED PRODUCTS -->
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-black text-center uppercase tracking-tighter mb-16">Technical Specifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
-                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Channel Size</p>
-                    <p class="text-lg font-bold italic text-gray-900">100x50mm / 75x50mm</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
-                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Material</p>
-                    <p class="text-lg font-bold italic text-gray-900">Food Grade PVC-U</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
-                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">UV Protection</p>
-                    <p class="text-lg font-bold italic text-gray-900">Anti-UV Treated</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
-                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Life Span</p>
-                    <p class="text-lg font-bold italic text-gray-900">10+ Years</p>
-                </div>
-            </div>
-            
-            <!-- Features Detail -->
-            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-wind text-green-600 text-2xl"></i>
+            <h2 class="text-3xl font-black text-center uppercase tracking-tighter mb-16">Explore More Solutions</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+                <!-- Tower -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group flex flex-col h-full border border-gray-100">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="https://sc01.alicdn.com/kf/H992b4ea8cfea4e2983146ef3754a66877.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Optimal Oxygenation</h3>
-                    <p class="text-sm text-gray-500 italic leading-relaxed">Thin nutrient film flow ensures roots receive maximum oxygen, accelerating growth rates by up to 25% compared to deep water culture.</p>
+                    <h4 class="font-black uppercase text-[10px] tracking-widest mb-4">Tower System</h4>
+                    <a href="TowerSystem.html" class="mt-auto block bg-gray-900 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 transition text-center">Details</a>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-puzzle-piece text-green-600 text-2xl"></i>
+                <!-- Dutch Bucket -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group flex flex-col h-full border border-gray-100">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="https://sc02.alicdn.com/kf/Ae528e16972e94626966601f0160d5b12R.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Modular Design</h3>
-                    <p class="text-sm text-gray-500 italic leading-relaxed">Our square channels are designed for easy assembly and scaling. Connect multiple 2.9m or 4m sections to fit your greenhouse length.</p>
+                    <h4 class="font-black uppercase text-[10px] tracking-widest mb-4">Dutch Bucket</h4>
+                    <a href="DutchBucket.html" class="mt-auto block bg-gray-900 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 transition text-center">Details</a>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-hand-holding-water text-green-600 text-2xl"></i>
+                <!-- Greenhouse -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group flex flex-col h-full border border-gray-100">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="https://sc02.alicdn.com/kf/Ab7783856d2524a87b1f6ec0913926838a.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Nutrient Savings</h3>
-                    <p class="text-sm text-gray-500 italic leading-relaxed">Closed-loop circulation system ensures nearly zero waste of water and fertilizers, making it the most eco-friendly choice for commercial leafy greens.</p>
+                    <h4 class="font-black uppercase text-[10px] tracking-widest mb-4">Greenhouse</h4>
+                    <a href="Greenhouse.html" class="mt-auto block bg-gray-900 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 transition text-center">Details</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Best Crops Section -->
-    <section class="py-24 bg-white border-t border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-black uppercase tracking-tighter mb-16">Optimized for Leafy Greens</h2>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="group">
-                    <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-sm border border-white">
-                        <img src="https://images.unsplash.com/photo-1622176114232-0a9725a39f7f?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <!-- Ebb & Flow -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group flex flex-col h-full border border-gray-100">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="https://sc02.alicdn.com/kf/Hb1a8685108f94d13a1a468e27c3a0780D.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <h4 class="font-bold uppercase text-xs tracking-widest text-gray-900">Butterhead Lettuce</h4>
+                    <h4 class="font-black uppercase text-[10px] tracking-widest mb-4">Ebb & Flow</h4>
+                    <a href="EbbFlow.html" class="mt-auto block bg-gray-900 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 transition text-center">Details</a>
                 </div>
-                <div class="group">
-                    <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-sm border border-white">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <!-- Seedling -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-xl transition group flex flex-col h-full border border-gray-100">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-gray-50">
+                        <img src="https://sc02.alicdn.com/kf/A369796e6c1e54911ac29729868731b81e.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
-                    <h4 class="font-bold uppercase text-xs tracking-widest text-gray-900">Basil & Herbs</h4>
-                </div>
-                <div class="group">
-                    <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-sm border border-white">
-                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <h4 class="font-bold uppercase text-xs tracking-widest text-gray-900">Spinach</h4>
-                </div>
-                <div class="group">
-                    <div class="aspect-square rounded-2xl overflow-hidden mb-4 shadow-sm border border-white">
-                        <img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    </div>
-                    <h4 class="font-bold uppercase text-xs tracking-widest text-gray-900">Kale</h4>
+                    <h4 class="font-black uppercase text-[10px] tracking-widest mb-4">Seedling Tray</h4>
+                    <a href="SeedlingTray.html" class="mt-auto block bg-gray-900 text-white py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-green-600 transition text-center">Details</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="py-24 bg-green-950 text-white text-center">
+    <!-- FOOTER & CONTACT INFO -->
+    <footer class="bg-gray-950 text-white py-24 border-t border-white/5">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-black uppercase tracking-tighter mb-8">Ready to Scale Your Production?</h2>
-            <p class="opacity-60 max-w-2xl mx-auto italic mb-12">Contact our engineers for a custom NFT layout design tailored to your greenhouse dimensions.</p>
-            <a href="Inquiry.html" class="inline-block bg-green-600 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-700 transition shadow-2xl">Get Technical Layout</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-white py-12 border-t border-gray-900">
-        <div class="container mx-auto px-6 text-center">
-            <div class="opacity-30 text-[10px] uppercase tracking-[0.3em] italic mb-6">
-                &copy; 2026 Agri Hydroponics. Professional Agricultural solutions provider.
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 mb-20">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <i class="fas fa-leaf text-green-500 text-3xl"></i>
+                        <span class="text-2xl font-black uppercase tracking-tighter">Agri <span class="text-green-500">Hydro</span></span>
+                    </div>
+                    <p class="text-[10px] text-white/40 uppercase tracking-[0.3em] italic leading-relaxed">Global export leader in professional aeroponic and hydroponic systems since 2016.</p>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Global Office</h4>
+                    <ul class="space-y-4 text-xs text-white/60">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-green-500"></i> Zhengzhou High-Tech Industrial Zone, China</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-green-500"></i> +86 135 9260 7568</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-500"></i> sales@agrihydroponics.com</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Quick Support</h4>
+                    <ul class="space-y-4 text-xs text-white/60">
+                        <li><a href="FAQ.html" class="hover:text-green-500 transition">Technical FAQ</a></li>
+                        <li><a href="Support.html" class="hover:text-green-500 transition">Installation Support</a></li>
+                        <li><a href="Inquiry.html" class="hover:text-green-500 transition">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 text-center lg:text-right">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Security & Partners</h4>
+                    <img src="https://sc01.alicdn.com/kf/H5fa39ef5bbea4225b91f19aa8226aedbg.png" alt="Trust Badges" class="h-10 grayscale opacity-40 inline-block">
+                </div>
             </div>
-            <div class="flex justify-center space-x-8 opacity-50 text-[10px] uppercase tracking-widest font-bold">
-                <a href="FAQ.html" class="hover:text-green-500 transition">FAQ</a>
-                <a href="Support.html" class="hover:text-green-500 transition">Support</a>
-                <a href="AfterSales.html" class="hover:text-green-500 transition">After-Sales</a>
-                <a href="PrivacyPolicy.html" class="hover:text-green-500 transition">Privacy</a>
+            <div class="text-center pt-12 border-t border-white/5 opacity-20 text-[10px] uppercase tracking-[0.3em] italic">
+                &copy; 2026 Agri Hydroponics. All Rights Reserved.
             </div>
         </div>
     </footer>
+
+    <!-- JS FOR IMAGE GALLERY -->
+    <script>
+        function updateImage(src) {
+            const mainImg = document.getElementById('main-product-img');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 200);
+            
+            // Update thumbnail borders
+            event.currentTarget.parentElement.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('border-green-600');
+                btn.classList.add('border-transparent');
+            });
+            event.currentTarget.classList.remove('border-transparent');
+            event.currentTarget.classList.add('border-green-600');
+        }
+    </script>
 
 </body>
 </html>
