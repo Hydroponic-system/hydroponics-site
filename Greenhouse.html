@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Greenhouse Solutions | Turnkey Projects | Agri Hydroponics</title>
+    <title>Greenhouse Solutions | Turnkey Projects | Agri Hydroponics</title>
     <meta name="description" content="Leading greenhouse manufacturer providing turnkey solutions. Multi-span greenhouses, film greenhouses, and professional structural designs for global climate conditions.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans leading-normal">
 
-    <!-- Navigation -->
+    <!-- 1. Navigation -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center text-gray-600">
             <div class="flex items-center space-x-2">
@@ -22,43 +22,103 @@
             <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
                 <a href="index.html" class="hover:text-green-600 transition">Home</a>
                 <a href="About.html" class="hover:text-green-600 transition">About Us</a>
-                <a href="index.html#products" class="text-green-600 transition border-b-2 border-green-600">Products</a>
+                <div class="relative group h-full py-4">
+                    <button class="text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em] border-b-2 border-green-600">
+                        Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
+                    </button>
+                    <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
+                        <a href="TowerSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Tower System</a>
+                        <a href="NFTSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">NFT System</a>
+                        <a href="DutchBucket.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Dutch Bucket</a>
+                        <a href="Greenhouse.html" class="block px-6 py-2.5 text-green-600 bg-green-50 transition text-[10px] font-black uppercase tracking-widest">Greenhouse</a>
+                        <a href="SeedlingTray.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Seedling Tray</a>
+                        <a href="EbbFlow.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Ebb & Flow</a>
+                    </div>
+                </div>
+                <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
+
                 <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase tracking-widest">Get Quote</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-white">
-        <div class="container mx-auto px-6 flex flex-col lg:row items-center gap-16">
-            <div class="lg:w-1/2">
-                <h1 class="text-5xl font-black uppercase tracking-tighter mb-6 leading-none text-gray-900">
-                    Professional <span class="text-green-600">Greenhouse</span> <br>Turnkey Solutions
-                </h1>
-                <p class="text-xl text-gray-500 italic mb-8 leading-relaxed">
-                    We provide high-quality greenhouse structures designed to withstand diverse climate conditions. Our turnkey solutions include everything from structural engineering to climate control and internal hydroponic integration.
-                </p>
-                <div class="flex flex-wrap gap-4 mb-10">
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Multi-Span Structures</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Film / Polycarbonate</span>
-                    <span class="bg-green-50 text-green-700 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest">Structural 5-Year Warranty</span>
+    <!-- Technical Specs Grid -->
+    <section class="py-24 bg-gray-50 border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-black text-center uppercase tracking-tighter mb-16">Technical Specifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Steel Structure</p>
+                    <p class="text-lg font-bold italic text-gray-900">Hot-Dip Galv. Steel</p>
                 </div>
-                <a href="Inquiry.html" class="inline-block bg-gray-900 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Inquiry Today</a>
-            </div>
-            <div class="lg:w-1/2 relative group">
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50 bg-white transform group-hover:scale-[1.02] transition-transform duration-700">
-                    <img src="greenhouse.jpg" alt="Agri Hydroponics Greenhouse" class="w-full h-auto object-cover">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Span Width</p>
+                    <p class="text-lg font-bold italic text-gray-900">8m / 9.6m / 12m</p>
                 </div>
-                <div class="absolute -top-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex items-center space-x-4">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
-                        <i class="fas fa-drafting-compass text-green-600"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] uppercase font-bold text-gray-400">Project Support</p>
-                        <p class="text-xl font-black text-gray-900">100% Customized</p>
-                    </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Wind Load</p>
+                    <p class="text-lg font-bold italic text-gray-900">120 - 150 km/h</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 group hover:shadow-xl transition">
+                    <p class="text-[10px] uppercase font-black text-gray-400 tracking-widest mb-2">Covering Life</p>
+                    <p class="text-lg font-bold italic text-gray-900">3 - 5 Years (Film)</p>
                 </div>
             </div>
+            
+            <!-- Features Detail -->
+            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-sun text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Light Optimization</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">High-transparency PE film with anti-drip and anti-dust coatings ensures maximum PAR light transmission for photosynthesis.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-fan text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Climate Control</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">Integrated roof ventilation and side wall roll-up systems. Optional cooling pads and exhaust fans for extreme heat conditions.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-black uppercase mb-4 tracking-tight">Prefabricated Build</h3>
+                    <p class="text-sm text-gray-500 italic leading-relaxed">All structural components are pre-cut and pre-drilled. Bolt-together assembly requires no welding on-site, reducing labor costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black uppercase tracking-tighter mb-16">Turnkey Project Support</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black uppercase mb-4">Site Planning</h4>
+                    <p class="text-sm text-gray-500 italic">2D/3D layout design optimized for your land dimensions and local weather patterns.</p>
+                </div>
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black uppercase mb-4">Hydro Integration</h4>
+                    <p class="text-sm text-gray-500 italic">Seamless integration of Tower, NFT, or Dutch Bucket systems within the greenhouse structure.</p>
+                </div>
+                <div class="p-10 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition">
+                    <h4 class="text-xl font-black uppercase mb-4">Export Logistics</h4>
+                    <p class="text-sm text-gray-500 italic">Global shipping with professional loading to maximize container space and minimize damage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 bg-green-950 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-8">Build Your Future Farm</h2>
+            <p class="opacity-60 max-w-2xl mx-auto italic mb-12">From 500sqm to 50,000sqm, we provide the structural engineering expertise you need for success.</p>
+            <a href="Inquiry.html" class="inline-block bg-green-600 text-white px-12 py-4 rounded-xl font-bold uppercase tracking-widest hover:bg-green-700 transition shadow-2xl">Request Greenhouse Quote</a>
         </div>
     </section>
 
