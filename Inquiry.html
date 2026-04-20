@@ -19,16 +19,18 @@
                     Agri <span class="text-green-600">Hydro</span><span class="text-gray-400 font-light lowercase">ponics</span>
                 </a>
             </div>
-            <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-[10px] tracking-widest items-center">
                 <a href="index.html" class="hover:text-green-600 transition">Home</a>
                 <a href="About.html" class="hover:text-green-600 transition">About Us</a>
-                <!-- Products Dropdown -->
                 <div class="relative group h-full py-4">
                     <button class="hover:text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em]">
                         Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
                     </button>
                     <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
-                        <a href="TowerSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Hydroponic Tower System</a>
+                        <div class="px-6 py-2 bg-gray-50 text-gray-950 font-black text-[10px] uppercase tracking-widest">Hydroponic Tower</div>
+                        <a href="TowerSystem.html" class="block px-8 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">— 4P Tower System</a>
+                        <a href="TowerSystem.html" class="block px-8 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">— 8P Tower System</a>
+                        <div class="h-px bg-gray-100 my-2 mx-6"></div>
                         <a href="NFTSystem.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Hydroponic NFT System</a>
                         <a href="DutchBucket.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Dutch Bucket System</a>
                         <a href="Greenhouse.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Greenhouse</a>
@@ -36,10 +38,8 @@
                         <a href="EbbFlow.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Ebb and Flow Table</a>
                     </div>
                 </div>
-
                 <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
-
-                <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase tracking-widest">Contact</a>
+                <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase">Contact</a>
             </div>
         </div>
     </nav>
@@ -101,7 +101,17 @@
                             </div>
                             <div>
                                 <label class="block text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">WhatsApp / Phone</label>
-                                <input type="text" placeholder="+1 234 567 890" class="w-full bg-gray-50 border border-gray-100 rounded-xl px-6 py-4 text-sm focus:outline-none focus:border-green-500 transition">
+                                <div class="flex">
+                                    <select class="bg-gray-50 border border-gray-100 border-r-0 rounded-l-xl px-4 text-gray-700 outline-none focus:border-green-500 transition appearance-none cursor-pointer font-bold text-xs">
+                                        <option value="+86">+86</option>
+                                        <option value="+1">+1</option>
+                                        <option value="+44">+44</option>
+                                        <option value="+971">+971</option>
+                                        <option value="+234">+234</option>
+                                        <option value="+254">+254</option>
+                                    </select>
+                                    <input type="tel" placeholder="Phone Number" class="w-full bg-gray-50 border border-gray-100 rounded-r-xl px-6 py-4 text-sm focus:outline-none focus:border-green-500 transition">
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -129,17 +139,40 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 text-white py-12 border-t border-gray-900">
-        <div class="container mx-auto px-6 text-center">
-            <div class="opacity-30 text-[10px] uppercase tracking-[0.3em] italic mb-6">
-                &copy; 2026 Agri Hydroponics. Professional Agricultural solutions provider.
+    <!-- FOOTER & CONTACT INFO -->
+    <footer class="bg-gray-950 text-white py-24 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-16 mb-20">
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-8">
+                        <i class="fas fa-leaf text-green-500 text-3xl"></i>
+                        <span class="text-2xl font-black uppercase tracking-tighter">Agri <span class="text-green-500">Hydro</span></span>
+                    </div>
+                    <p class="text-[10px] text-white/40 uppercase tracking-[0.3em] italic leading-relaxed">Global export leader in professional aeroponic and hydroponic systems since 2016.</p>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Global Office</h4>
+                    <ul class="space-y-4 text-xs text-white/60">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-green-500"></i> Zhengzhou High-Tech Industrial Zone, China</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-green-500"></i> +86 135 9260 7568</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-envelope text-green-500"></i> sales@agrihydroponics.com</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Quick Support</h4>
+                    <ul class="space-y-4 text-xs text-white/60">
+                        <li><a href="FAQ.html" class="hover:text-green-500 transition">Technical FAQ</a></li>
+                        <li><a href="Support.html" class="hover:text-green-500 transition">Installation Support</a></li>
+                        <li><a href="Inquiry.html" class="hover:text-green-500 transition">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 text-center lg:text-right">
+                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Security & Partners</h4>
+                    <img src="https://sc01.alicdn.com/kf/H5fa39ef5bbea4225b91f19aa8226aedbg.png" alt="Trust Badges" class="h-10 grayscale opacity-40 inline-block">
+                </div>
             </div>
-            <div class="flex justify-center space-x-8 opacity-50 text-[10px] uppercase tracking-widest font-bold">
-                <a href="FAQ.html" class="hover:text-green-500 transition">FAQ</a>
-                <a href="Support.html" class="hover:text-green-500 transition">Support</a>
-                <a href="AfterSales.html" class="hover:text-green-500 transition">After-Sales</a>
-                <a href="PrivacyPolicy.html" class="hover:text-green-500 transition">Privacy</a>
+            <div class="text-center pt-12 border-t border-white/5 opacity-20 text-[10px] uppercase tracking-[0.3em] italic">
+                &copy; 2026 Agri Hydroponics. All Rights Reserved.
             </div>
         </div>
     </footer>
