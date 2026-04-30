@@ -10,7 +10,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
-        .text-gradient { background: linear-gradient(to right, #16a34a, #15803d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
 <body class="bg-white text-gray-900 selection:bg-green-100">
@@ -55,8 +54,8 @@
             <div class="flex flex-col lg:flex-row gap-16 items-start">
                 <!-- Gallery Side -->
                 <div class="lg:w-1/2 w-full">
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 mb-6 group">
-                        <img id="main-product-img" src="8pTower1.jpg" alt="8P Hydroponic Tower" class="w-full aspect-square object-cover transition-opacity duration-300">
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 mb-6 group text-center">
+                        <img id="main-product-img" src="8pTower1.jpg" alt="8P Hydroponic Tower" class="inline-block w-full aspect-square object-contain transition-opacity duration-300">
                     </div>
                     <div class="grid grid-cols-5 gap-4">
                         <button onclick="updateImage('8pTower1.jpg')" class="aspect-square rounded-xl overflow-hidden border-2 border-green-600 hover:opacity-80 transition">
@@ -91,19 +90,7 @@
                         <p>Manufactured using food-grade PVC material with UV protection, the 8P series ensures a 10+ year service life even under intensive industrial use.</p>
                     </div>
 
-                    <!-- Tech Specs Preview -->
-                    <div class="grid grid-cols-2 gap-6 mb-12">
-                        <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Plants/Layer</div>
-                            <div class="text-2xl font-black text-green-600">8 Holes</div>
-                        </div>
-                        <div class="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
-                            <div class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Max Height</div>
-                            <div class="text-2xl font-black text-green-600">15 Layers</div>
-                        </div>
-                    </div>
-
-                    <a href="#inquiry" class="block w-full bg-gray-900 text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition-all shadow-xl shadow-gray-200">
+                    <a href="#inquiry" class="block w-full bg-gray-900 text-white text-center py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition-all shadow-xl shadow-gray-200">
                         Request Quote & Catalog
                     </a>
                 </div>
@@ -111,27 +98,60 @@
         </div>
     </section>
 
-    <!-- 3. Technical Specifications -->
+    <!-- 3. Technical Specifications (ALIBABA LAYOUT WITH IMAGE) -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-black text-center mb-16 uppercase tracking-widest text-gray-900">Technical <span class="text-green-600">Specifications</span></h2>
-            <div class="max-w-4xl mx-auto overflow-hidden rounded-3xl border border-gray-100 shadow-xl">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-gray-950 text-white text-[10px] font-black uppercase tracking-[0.3em]">
-                            <th class="py-6 px-8">Parameter</th>
-                            <th class="py-6 px-8">8P Industrial Specification</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm text-gray-600 font-medium italic">
-                        <tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Base Diameter</td><td class="py-6 px-8">670 mm (Reinforced Base)</td></tr>
-                        <tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Total Layers</td><td class="py-6 px-8">10 / 12 / 15 Layers Optional</td></tr>
-                        <tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Total Plant Holes</td><td class="py-6 px-8">80 / 96 / 120 Holes</td></tr>
-                        <tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Material</td><td class="py-6 px-8">Food Grade PVC (UV Stabilized)</td></tr>
-                        <tr class="border-b border-gray-50 hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Irrigation Mode</td><td class="py-6 px-8">Smart Aeroponic Cycle</td></tr>
-                        <tr class="hover:bg-gray-50 transition"><td class="py-6 px-8 font-black uppercase text-[10px] tracking-widest text-gray-900">Water Tank</td><td class="py-6 px-8">100 Liters (Large Capacity)</td></tr>
-                    </tbody>
-                </table>
+            
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+                <!-- Left: Product Image -->
+                <div class="lg:w-1/3 w-full">
+                    <img src="8pTower6.jpg" alt="8P Tower Technical Details" class="w-full rounded-[2rem] shadow-xl border border-gray-100 object-cover">
+                </div>
+
+                <!-- Right: Specifications Grid -->
+                <div class="lg:w-2/3 w-full">
+                    <div class="grid grid-cols-1 md:grid-cols-2 border border-gray-200 rounded-lg overflow-hidden bg-white">
+                        <!-- Left Column -->
+                        <div class="divide-y divide-gray-200 border-r border-gray-200">
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Material</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">Food Grade PVC</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Design</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">8 Plants / Layer</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Base Diameter</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">67cm</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Water Tank</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">100 Liters</div>
+                            </div>
+                        </div>
+                        <!-- Right Column -->
+                        <div class="divide-y divide-gray-200">
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Advantage</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">High Density / High Yield</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Features</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">UV Protected / 10+ Years Life</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Growing Mode</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">Aeroponic Cycle</div>
+                            </div>
+                            <div class="flex items-stretch min-h-[60px]">
+                                <div class="w-1/3 bg-gray-50 px-6 py-4 flex items-center text-[10px] font-black uppercase tracking-widest text-gray-500">Applications</div>
+                                <div class="w-2/3 px-6 py-4 flex items-center text-sm font-medium italic">Commercial Greenhouses</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
