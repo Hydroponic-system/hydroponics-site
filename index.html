@@ -28,17 +28,15 @@
                     Agri <span class="text-green-600">Hydro</span><span class="text-gray-400 font-light lowercase">ponics</span>
                 </a>
             </div>
-            <div class="hidden lg:flex space-x-8 font-bold uppercase text-xs tracking-widest items-center">
-                <a href="index.html" class="hover:text-green-600 transition">Home</a>
+            <div class="hidden lg:flex space-x-8 font-bold uppercase text-[10px] tracking-widest items-center">
+                <a href="index.html" class="text-green-600 transition border-b-2 border-green-600">Home</a>
                 <a href="About.html" class="hover:text-green-600 transition">About Us</a>
-                <!-- Products Dropdown -->
                 <div class="relative group h-full py-4">
-                    <button class="hover:text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em]">
+                    <button class="hover:text-green-600 transition flex items-center uppercase text-[10px] font-black tracking-[0.2em] border-b-2 border-transparent group-hover:border-green-600">
                         Products <i class="fas fa-chevron-down ml-1 text-[8px]"></i>
                     </button>
                     <div class="absolute left-0 mt-0 w-56 bg-white border border-gray-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-4 transform translate-y-2 group-hover:translate-y-0">
-                        <!-- Hydroponic Tower Group -->
-                        <div class="px-6 py-2 bg-gray-50 text-gray-950 font-black text-[10px] uppercase tracking-widest">Hydroponic Tower</div>
+                        <div class="px-6 py-2 bg-gray-950 text-white font-black text-[10px] uppercase tracking-widest">Hydroponic Tower</div>
                         <a href="TowerSystem.html" class="block px-8 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">4P Tower System</a>
                         <a href="TowerSystem8P.html" class="block px-8 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">8P Tower System</a>
                         <div class="h-px bg-gray-100 my-2 mx-6"></div>
@@ -48,6 +46,10 @@
                         <a href="SeedlingTray.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Seedling Tray</a>
                         <a href="EbbFlow.html" class="block px-6 py-2.5 text-gray-400 hover:bg-green-50 hover:text-green-600 transition text-[10px] font-black uppercase tracking-widest">Ebb and Flow Table</a>
                     </div>
+                </div>
+                <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
+                <a href="Inquiry.html" class="bg-green-600 text-white px-8 py-2.5 rounded-lg hover:bg-green-700 transition shadow-lg uppercase">Contact</a>
+            </div>
                 </div>
 
                 <a href="Projects.html" class="hover:text-green-600 transition">Projects</a>
@@ -60,7 +62,7 @@
     <!-- 2. Banner Section -->
     <section id="home" class="pt-16 lg:pt-20 overflow-hidden">
         <div class="relative w-full">
-            <img src="banner1.jpg" class="slide active" alt="Banner 1">
+            <img src="banner.jpg" class="slide active" alt="Banner 1">
             <img src="banner2.jpg" class="slide" alt="Banner 2">
             <img src="banner3.jpg" class="slide" alt="Banner 3">
             <button onclick="changeSlide(-1)" class="carousel-control absolute left-4 top-1/2 -translate-y-1/2 p-3 lg:p-4 rounded-full text-white z-20">
@@ -114,7 +116,6 @@
                             loop 
                             playsinline
                             poster="nft0.jpg"
-                            preload="metadata"
                         >
                             <source src="factory-introduction.mp4" type="video/mp4">
                             Your browser does not support the video tag.
