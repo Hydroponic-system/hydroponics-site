@@ -10,6 +10,16 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .marquee-content {
+            animation: scroll 40s linear infinite;
+        }
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 selection:bg-green-100">
@@ -161,7 +171,40 @@
         </div>
     </section>
 
-    <!-- 5. INQUIRY CALL TO ACTION -->
+    <!-- 5. FACTORY INTERIOR GALLERY (MARQUEE) -->
+    <section class="py-24 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-6 mb-16 text-center">
+            <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-green-600 mb-4 italic">Manufacturing Power</h2>
+            <h3 class="text-3xl lg:text-5xl font-black uppercase tracking-tighter text-gray-900">Inside Our <span class="text-green-600">Factory</span></h3>
+        </div>
+        
+        <div class="relative flex overflow-hidden">
+            <div class="marquee-content flex gap-8 px-4">
+                <!-- Original Set -->
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/A45bf4dad83c04987b2d8706b4fda2905e.png" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/A7db672b267d241c3b9dd05d10b6eb378S.png" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/Aadc3b4975cd548ff8a66c70982694e40B.jpg" class="w-full h-full object-cover">
+                </div>
+                <!-- Duplicated Set for Infinite Loop -->
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/A45bf4dad83c04987b2d8706b4fda2905e.png" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/A7db672b267d241c3b9dd05d10b6eb378S.png" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[400px] lg:w-[600px] aspect-video rounded-[2rem] overflow-hidden shadow-xl flex-shrink-0">
+                    <img src="https://sc01.alicdn.com/kf/Aadc3b4975cd548ff8a66c70982694e40B.jpg" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. INQUIRY CALL TO ACTION -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="bg-gray-900 rounded-[3rem] p-12 lg:p-20 text-center relative overflow-hidden group">
