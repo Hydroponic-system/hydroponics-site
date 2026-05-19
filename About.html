@@ -71,9 +71,9 @@
     <!-- 3. COMPANY STORY & STATS -->
     <section class="py-32 bg-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col lg:flex-row items-center gap-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
                 <!-- Left Content -->
-                <div class="lg:w-1/2 space-y-10">
+                <div class="space-y-10">
                     <div>
                         <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-green-600 mb-4 italic">Our Foundation</h2>
                         <h3 class="text-4xl lg:text-5xl font-black uppercase tracking-tighter text-gray-900 leading-none">The Trusted Partner in <br><span class="text-green-600">Modern Greenhouse</span> Farming</h3>
@@ -83,22 +83,10 @@
                         <p>Agri Hydroponics (Hengshui Fanye Technology Co., Ltd.), located at Room 2004, Floor 20, Unit 2, Building 3, Shenghao Xindu Theater, No. 259 Hongqi Street, Taocheng District, Hengshui, Hebei, China, was founded with a single mission: to provide professional, sustainable, and high-yield agricultural solutions to growers worldwide. Based in Hebei, China, we have grown from a local specialist into a global export powerhouse.</p>
                         <p>We specialize in the R&D, design, and precision manufacturing of complete greenhouse structures and advanced hydroponic systems. From our signature Vertical Towers to large-scale NFT installations, we provide the engineering backbone for successful commercial farms.</p>
                     </div>
-
-                    <!-- Stats Grid -->
-                    <div class="grid grid-cols-2 gap-12 pt-12 border-t border-gray-100">
-                        <div class="group">
-                            <span class="block text-5xl font-black text-gray-900 mb-2 group-hover:text-green-600 transition">100+</span>
-                            <span class="text-[10px] uppercase font-black text-gray-400 tracking-widest italic leading-none">Global Markets <br>Served</span>
-                        </div>
-                        <div class="group">
-                            <span class="block text-5xl font-black text-gray-900 mb-2 group-hover:text-green-600 transition">5000+</span>
-                            <span class="text-[10px] uppercase font-black text-gray-400 tracking-widest italic leading-none">Commercial Projects <br>Delivered</span>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Right Visuals -->
-                <div class="lg:w-1/2 relative">
+                <div class="relative">
                     <div class="aspect-video rounded-[3rem] overflow-hidden shadow-2xl relative z-10 group bg-gray-100">
                         <video class="w-full h-full object-cover" autoplay muted loop playsinline>
                             <source src="factory%20-introduction.mp4" type="video/mp4">
@@ -106,6 +94,21 @@
                         </video>
                     </div>
                 </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-12">
+                <div class="grid grid-cols-2 gap-12 pt-12 border-t border-gray-100">
+                    <div class="group">
+                        <span class="block text-5xl font-black text-gray-900 mb-2 group-hover:text-green-600 transition">100+</span>
+                        <span class="text-[10px] uppercase font-black text-gray-400 tracking-widest italic leading-none">Global Markets <br>Served</span>
+                    </div>
+                    <div class="group">
+                        <span class="block text-5xl font-black text-gray-900 mb-2 group-hover:text-green-600 transition">5000+</span>
+                        <span class="text-[10px] uppercase font-black text-gray-400 tracking-widest italic leading-none">Commercial Projects <br>Delivered</span>
+                    </div>
+                </div>
+                <div></div>
             </div>
         </div>
     </section>
@@ -226,4 +229,5 @@
 
 </body>
 </html>
+
 
