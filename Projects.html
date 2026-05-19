@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | Global Hydroponic Projects | Agri Hydroponics</title>
-    <meta name="description" content="Explore our global success stories. From massive greenhouses in UAE to vertical farms in Germany, see how our hydroponic systems perform worldwide.">
+    <title>Global Case Studies | Commercial Hydroponic Projects | Agri Hydroponics</title>
+    <meta name="description" content="Discover our large-scale hydroponic and greenhouse projects worldwide. From Dubai to Germany, we deliver high-yield agricultural engineering solutions.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans leading-normal">
+<body class="bg-white text-gray-900 selection:bg-green-100">
 
-    <!-- 1. Navigation -->
+    <!-- 1. Navigation (Sync with Main) -->
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center text-gray-600">
             <div class="flex items-center space-x-2">
@@ -44,67 +48,155 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-4 text-gray-900 leading-none">Global Project <br><span class="text-green-600">Case Studies</span></h1>
-            <p class="text-gray-500 max-w-xl mx-auto italic font-medium">Real-world success stories across 100+ countries, proving the reliability of our professional systems.</p>
+    <!-- 2. Hero Section -->
+    <header class="pt-32 pb-20 bg-gray-950 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=1920" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 relative z-10 text-center py-20">
+            <h5 class="text-green-500 font-black uppercase tracking-[0.4em] text-[10px] mb-6 italic">Engineering Success Worldwide</h5>
+            <h1 class="text-5xl lg:text-8xl font-black uppercase tracking-tighter mb-8 leading-none">Global Project <br><span class="text-green-500">Case Studies</span></h1>
+            <p class="text-white/60 text-lg max-w-2xl mx-auto italic leading-relaxed">From massive multi-span greenhouses to compact vertical farms, explore how our technology is solving food security challenges in over 100 countries.</p>
+        </div>
+    </header>
+
+    <!-- 3. Key Stats Bar -->
+    <section class="bg-green-600 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-white text-center">
+                <div>
+                    <p class="text-4xl font-black mb-1">100+</p>
+                    <p class="text-[10px] uppercase font-black tracking-widest opacity-60">Countries Served</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black mb-1">500k+</p>
+                    <p class="text-[10px] uppercase font-black tracking-widest opacity-60">Sqm Installed</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black mb-1">10+</p>
+                    <p class="text-[10px] uppercase font-black tracking-widest opacity-60">Years Experience</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-black mb-1">24/7</p>
+                    <p class="text-[10px] uppercase font-black tracking-widest opacity-60">Global Support</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Project Grid -->
-    <section class="py-24 bg-gray-50/50">
+    <!-- 4. Featured Project 1: Commercial Greenhouse -->
+    <section class="py-32 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                
-                <!-- Project 1 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-green-600 font-black uppercase tracking-[0.3em] text-[10px] italic">Category: Multi-Span Greenhouse</span>
+                    <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-gray-900 leading-none">Dubai <span class="text-green-600">Commercial</span> <br>Greenhouse</h2>
+                    <div class="space-y-6 text-gray-500 italic leading-relaxed text-sm">
+                        <p>A landmark 10,000 sqm project in the UAE desert, utilizing our multi-span film greenhouse systems integrated with automated NFT channels. Designed for extreme temperature resilience and water efficiency.</p>
+                        <ul class="space-y-4 not-italic">
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Climate Control:</span> Automated cooling & humidity systems</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Production:</span> 2.5 Million heads of lettuce per year</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Efficiency:</span> 90% Water reduction vs. traditional farming</li>
+                        </ul>
                     </div>
-                    <div class="p-10">
-                        <span class="text-green-600 font-black uppercase tracking-[0.2em] text-[10px] block mb-4">UAE | Dubai</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tight mb-4 leading-none text-gray-900">10,000 sqm Commercial Greenhouse</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-8 italic">Implementing multi-span greenhouse systems with automated NFT channels for sustainable desert farming.</p>
-                        <div class="flex items-center justify-between pt-8 border-t border-gray-50">
-                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Completed 2025</span>
-                            <span class="text-green-600 text-xs font-black uppercase tracking-widest">Verified Case <i class="fas fa-check-circle ml-1"></i></span>
-                        </div>
+                    <a href="Inquiry.html" class="inline-block bg-gray-950 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Get Similar Solution</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Featured Project 2: Vertical Farming -->
+    <section class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+                <div class="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1530836361253-efad5cb2feec?auto=format&fit=crop&w=1200" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-green-600 font-black uppercase tracking-[0.3em] text-[10px] italic">Category: Vertical Aeroponics</span>
+                    <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-gray-900 leading-none">Germany <span class="text-green-600">City Farm</span> <br>Network</h2>
+                    <div class="space-y-6 text-gray-500 italic leading-relaxed text-sm">
+                        <p>Installation of high-density vertical tower systems in a former industrial warehouse in Hamburg. This project supplies ultra-fresh herbs to over 50 local restaurants daily.</p>
+                        <ul class="space-y-4 not-italic">
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Density:</span> 80 Plants per square meter</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Lighting:</span> Full-spectrum LED automation</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Zero Pesticides:</span> Biosecure indoor environment</li>
+                        </ul>
+                    </div>
+                    <a href="TowerSystem8P.html" class="inline-block bg-green-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-gray-900 transition shadow-xl">Explore Towers</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Featured Project 3: Container Farming -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 group">
+                    <img src="https://images.unsplash.com/photo-1558448848-c31932629431?auto=format&fit=crop&w=1200" class="w-full aspect-[4/3] object-cover group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="lg:w-1/2 space-y-8">
+                    <span class="text-green-600 font-black uppercase tracking-[0.3em] text-[10px] italic">Category: Turnkey Container Farm</span>
+                    <h2 class="text-4xl lg:text-6xl font-black uppercase tracking-tighter text-gray-900 leading-none">Nigeria <span class="text-green-600">Fodder</span> <br>Facility</h2>
+                    <div class="space-y-6 text-gray-500 italic leading-relaxed text-sm">
+                        <p>Providing food security for livestock in Lagos through our automated containerized fodder systems. Each 40ft container produces up to 1,000kg of fresh barley fodder daily.</p>
+                        <ul class="space-y-4 not-italic">
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Mobility:</span> Fully portable shipping container design</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">ROI:</span> System payoff within 18 months</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-600"></i> <span class="text-gray-900 font-bold">Climate:</span> Independent of external weather conditions</li>
+                        </ul>
+                    </div>
+                    <a href="Inquiry.html" class="inline-block bg-gray-950 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Contact For Container Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Global Gallery / More Projects -->
+    <section class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-black uppercase tracking-tighter mb-16">Other Global Installations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 text-left">
+                    <p class="text-green-600 font-black uppercase text-[10px] mb-4">Brazil | NFT</p>
+                    <h4 class="font-bold text-lg mb-2">Herb Factory</h4>
+                    <p class="text-gray-500 text-xs italic">Multi-tier NFT system for sustainable herb production.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 text-left">
+                    <p class="text-green-600 font-black uppercase text-[10px] mb-4">USA | Dutch Bucket</p>
+                    <h4 class="font-bold text-lg mb-2">Tomato Range</h4>
+                    <p class="text-gray-500 text-xs italic">Large scale vine crop production in California.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 text-left">
+                    <p class="text-green-600 font-black uppercase text-[10px] mb-4">Thailand | Greenhouse</p>
+                    <h4 class="font-bold text-lg mb-2">Fruit Project</h4>
+                    <p class="text-gray-500 text-xs italic">Tropical multi-span greenhouse for melon production.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 text-left">
+                    <p class="text-green-600 font-black uppercase text-[10px] mb-4">Australia | Vertical</p>
+                    <h4 class="font-bold text-lg mb-2">Rooftop Farm</h4>
+                    <p class="text-gray-500 text-xs italic">Urban rooftop farming utilizing 4P tower systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. INQUIRY CALL TO ACTION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-gray-950 rounded-[3rem] p-12 lg:p-24 text-center relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-4xl lg:text-7xl font-black text-white uppercase tracking-tighter mb-8 leading-none">Ready to Start Your <br><span class="text-green-500">Agri-Project?</span></h2>
+                    <p class="text-white/40 text-lg max-w-2xl mx-auto mb-12 italic">Contact our engineering team today for a free technical consultation and customized project proposal.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/8613333189707" class="bg-green-600 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-gray-900 transition shadow-2xl">WhatsApp Us</a>
+                        <a href="Inquiry.html" class="bg-white text-gray-900 px-12 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-green-600 hover:text-white transition shadow-2xl">Send Inquiry</a>
                     </div>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-10">
-                        <span class="text-green-600 font-black uppercase tracking-[0.2em] text-[10px] block mb-4">Nigeria | Lagos</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tight mb-4 leading-none text-gray-900">Hydroponic Fodder Container System</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-8 italic">Automated climate-controlled container farms producing high-quality barley fodder for local livestock.</p>
-                        <div class="flex items-center justify-between pt-8 border-t border-gray-50">
-                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Completed 2024</span>
-                            <span class="text-green-600 text-xs font-black uppercase tracking-widest">Verified Case <i class="fas fa-check-circle ml-1"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 group">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1530836361253-efad5cb2feec?auto=format&fit=crop&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-10">
-                        <span class="text-green-600 font-black uppercase tracking-[0.2em] text-[10px] block mb-4">Germany | Hamburg</span>
-                        <h3 class="text-2xl font-black uppercase tracking-tight mb-4 leading-none text-gray-900">Indoor Vertical Tower Farm</h3>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-8 italic">High-density indoor vertical farming utilizing our aeroponic tower systems for restaurant supply.</p>
-                        <div class="flex items-center justify-between pt-8 border-t border-gray-100">
-                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-300">Completed 2024</span>
-                            <span class="text-green-600 text-xs font-black uppercase tracking-widest">Verified Case <i class="fas fa-check-circle ml-1"></i></span>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -118,7 +210,10 @@
                         <i class="fas fa-leaf text-green-500 text-3xl"></i>
                         <span class="text-2xl font-black uppercase tracking-tighter">Agri <span class="text-green-500">Hydro</span></span>
                     </div>
-                    <p class="text-[10px] text-white/40 uppercase tracking-[0.3em] italic leading-relaxed">Reliable global manufacturer of professional aeroponic and hydroponic systems.</p>
+                    <p class="text-xs text-white/40 leading-relaxed mb-8 tracking-widest">
+                        Hengshui Fanye Technology Co., Ltd.<br>
+                        Reliable global manufacturer of professional aeroponic and hydroponic systems.
+                    </p>
                 </div>
                 <div class="lg:col-span-1">
                     <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Global Office</h4>
@@ -141,12 +236,9 @@
                     <ul class="space-y-4 text-xs text-white/60">
                         <li><a href="PrivacyPolicy.html" class="hover:text-green-500 transition">Privacy Policy</a></li>
                         <li><a href="TermsOfService.html" class="hover:text-green-500 transition">Terms of Service</a></li>
+                        <li><a href="ShippingPolicy.html" class="hover:text-green-500 transition">Shipping Policy</a></li>
                         <li><a href="AfterSales.html" class="hover:text-green-500 transition">Warranty & Refund Policy</a></li>
                     </ul>
-                </div>
-                <div class="lg:col-span-1 text-center lg:text-right">
-                    <h4 class="text-[10px] font-black uppercase tracking-[0.4em] mb-8 text-green-500">Security & Partners</h4>
-                    <img src="https://sc01.alicdn.com/kf/H5fa39ef5bbea4225b91f19aa8226aedbg.png" alt="Trust Badges" class="h-10 grayscale opacity-40 inline-block">
                 </div>
             </div>
             <div class="text-center pt-12 border-t border-white/5 opacity-20 text-[10px] tracking-[0.3em] italic">
