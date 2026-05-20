@@ -272,15 +272,15 @@
 
                 <!-- Right Form -->
                 <div class="lg:w-2/3 w-full">
-                    <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100">
-                        <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 relative overflow-hidden">
+                        <form id="homeInquiryForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="flex flex-col">
                                 <label class="text-sm font-bold text-gray-700 mb-2">Name *</label>
-                                <input type="text" placeholder="Your Name" class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-green-600 focus:bg-white transition" required>
+                                <input type="text" id="homeName" placeholder="Your Name" class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-green-600 focus:bg-white transition" required>
                             </div>
                             <div class="flex flex-col">
                                 <label class="text-sm font-bold text-gray-700 mb-2">Email *</label>
-                                <input type="email" placeholder="Email Address" class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-green-600 focus:bg-white transition" required>
+                                <input type="email" id="homeEmail" placeholder="Email Address" class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-green-600 focus:bg-white transition" required>
                             </div>
                             <div class="flex flex-col">
                                 <label class="text-sm font-bold text-gray-700 mb-2">Phone/Mobile *</label>
@@ -309,11 +309,32 @@
                                 <textarea rows="4" placeholder="How can we help you?" class="bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-green-600 focus:bg-white transition"></textarea>
                             </div>
                             <div class="md:col-span-2">
+                                <p class="text-[10px] text-gray-400 mb-4 tracking-widest uppercase">
+                                    By submitting this form, you agree to our <a href="PrivacyPolicy.html" class="text-green-600 underline">Privacy Policy</a> regarding the handling of your data.
+                                </p>
                                 <button type="submit" class="w-full bg-green-800 text-white font-black uppercase tracking-widest py-5 rounded-xl hover:bg-green-900 shadow-xl transition-all transform hover:-translate-y-1">
                                     Submit Form
                                 </button>
                             </div>
                         </form>
+
+                        <!-- Success Overlay (Hidden by Default) -->
+                        <div id="homeSuccessOverlay" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md z-50 flex items-center justify-center p-8 text-center">
+                            <div class="space-y-6">
+                                <div class="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-3xl mx-auto shadow-2xl">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-black text-gray-900 uppercase tracking-tighter mb-2">Inquiry Received!</h3>
+                                    <p class="text-gray-500 text-xs leading-relaxed max-w-xs mx-auto italic">Thank you, <span id="homeDisplayName" class="text-green-600 font-bold"></span>! We will contact you at <span id="homeDisplayEmail" class="text-green-600 font-bold"></span> shortly.</p>
+                                </div>
+                                <div class="pt-4 space-y-4">
+                                    <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Need an urgent response?</p>
+                                    <a href="https://wa.me/8613333189707" class="inline-block bg-[#25D366] text-white px-10 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-green-600 transition shadow-xl">Chat via WhatsApp</a>
+                                </div>
+                                <button onclick="closeHomeOverlay()" class="text-gray-300 hover:text-gray-600 transition text-[10px] font-bold uppercase tracking-widest">Modify Details</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,6 +405,34 @@
         }
         function changeSlide(n) { showSlide(currentSlide + n); }
         setInterval(() => changeSlide(1), 5000);
+
+        // Home Form Logic
+        document.getElementById('homeInquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('homeName').value;
+            const email = document.getElementById('homeEmail').value;
+            document.getElementById('homeDisplayName').innerText = name;
+            document.getElementById('homeDisplayEmail').innerText = email;
+            document.getElementById('homeSuccessOverlay').classList.remove('hidden');
+        });
+
+        function closeHomeOverlay() {
+            document.getElementById('homeSuccessOverlay').classList.add('hidden');
+        }
     </script>
+
+    <!-- Global Floating WhatsApp Button -->
+    <a href="https://wa.me/8613333189707" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center">
+        <!-- Text Bubble -->
+        <div class="bg-white px-5 py-3 rounded-2xl shadow-2xl border border-gray-100 mr-4 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 hidden md:block">
+            <p class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-900 whitespace-nowrap">Online: Chat on WhatsApp</p>
+        </div>
+        <!-- Icon -->
+        <div class="bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-[0_20px_50px_rgba(37,211,102,0.3)] hover:scale-110 transition duration-300 relative">
+            <i class="fab fa-whatsapp text-white text-4xl"></i>
+            <!-- Online Dot -->
+            <span class="absolute top-0 right-0 w-4 h-4 bg-green-400 border-2 border-white rounded-full animate-pulse"></span>
+        </div>
+    </a>
 </body>
 </html>
