@@ -138,26 +138,26 @@
                         <div class="relative z-10">
                             <h3 class="text-4xl font-black text-white uppercase tracking-tighter mb-10">Request A <span class="text-green-500">Quote</span></h3>
                             
-                            <form action="#" method="POST" class="space-y-8">
+                            <form id="inquiryForm" class="space-y-8">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div class="space-y-2">
                                         <label class="text-[10px] font-black uppercase tracking-widest text-white/40 ml-4">Full Name</label>
-                                        <input type="text" placeholder="e.g. John Doe" class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
+                                        <input type="text" id="name" required placeholder="e.g. John Doe" class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
                                     </div>
                                     <div class="space-y-2">
                                         <label class="text-[10px] font-black uppercase tracking-widest text-white/40 ml-4">Email Address</label>
-                                        <input type="email" placeholder="e.g. john@example.com" class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
+                                        <input type="email" id="email" required placeholder="e.g. john@example.com" class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
                                     </div>
                                 </div>
                                 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div class="space-y-2">
                                         <label class="text-[10px] font-black uppercase tracking-widest text-white/40 ml-4">WhatsApp/Phone</label>
-                                        <input type="text" placeholder="+1..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
+                                        <input type="text" id="phone" placeholder="+1..." class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20">
                                     </div>
                                     <div class="space-y-2">
                                         <label class="text-[10px] font-black uppercase tracking-widest text-white/40 ml-4">Subject</label>
-                                        <select class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition appearance-none cursor-pointer">
+                                        <select id="subject" class="w-full bg-white/5 border border-white/10 rounded-2xl px-8 py-5 text-white focus:outline-none focus:border-green-600 transition appearance-none cursor-pointer">
                                             <option class="bg-gray-900" disabled selected>Select Your Project Type</option>
                                             <option class="bg-gray-900">4P Tower System</option>
                                             <option class="bg-gray-900">8P Tower System</option>
@@ -173,7 +173,7 @@
 
                                 <div class="space-y-2">
                                     <label class="text-[10px] font-black uppercase tracking-widest text-white/40 ml-4">Project Details</label>
-                                    <textarea rows="4" placeholder="Briefly describe your project requirements..." class="w-full bg-white/5 border border-white/10 rounded-3xl px-8 py-6 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20 resize-none"></textarea>
+                                    <textarea id="message" rows="4" placeholder="Briefly describe your project requirements..." class="w-full bg-white/5 border border-white/10 rounded-3xl px-8 py-6 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20 resize-none"></textarea>
                                 </div>
 
                                 <button type="submit" class="w-full bg-green-600 text-white font-black uppercase tracking-[0.2em] py-6 rounded-2xl hover:bg-white hover:text-gray-950 transition-all duration-500 shadow-2xl shadow-green-600/20">
@@ -184,6 +184,24 @@
                                     <i class="fas fa-shield-alt mr-2"></i> Your information is safe with us. We hate spam too.
                                 </p>
                             </form>
+
+                            <!-- Success Overlay -->
+                            <div id="successOverlay" class="hidden absolute inset-0 bg-gray-950/95 backdrop-blur-md z-50 flex items-center justify-center p-8 text-center">
+                                <div class="space-y-8">
+                                    <div class="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto shadow-2xl shadow-green-600/40">
+                                        <i class="fas fa-check"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-3xl font-black text-white uppercase tracking-tighter mb-4">Inquiry Received!</h3>
+                                        <p class="text-white/60 text-sm leading-relaxed max-w-xs mx-auto italic">Thank you for your interest. Our engineering team will contact you at <span id="displayEmail" class="text-green-500 font-bold"></span> within 24 hours.</p>
+                                    </div>
+                                    <div class="pt-4 space-y-4">
+                                        <p class="text-[10px] font-black text-white/40 uppercase tracking-widest">Need an urgent quote?</p>
+                                        <a href="https://wa.me/8613333189707" class="inline-block bg-green-600 text-white px-10 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white hover:text-gray-900 transition">Chat via WhatsApp</a>
+                                    </div>
+                                    <button onclick="closeOverlay()" class="text-white/20 hover:text-white transition text-[10px] font-bold uppercase tracking-widest">Back to Form</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -264,6 +282,18 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            document.getElementById('displayEmail').innerText = email;
+            document.getElementById('successOverlay').classList.remove('hidden');
+        });
+
+        function closeOverlay() {
+            document.getElementById('successOverlay').classList.add('hidden');
+            document.getElementById('inquiryForm').reset();
+        }
+    </script>
 </body>
 </html>
-
