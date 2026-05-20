@@ -176,9 +176,14 @@
                                     <textarea id="message" rows="4" placeholder="Briefly describe your project requirements..." class="w-full bg-white/5 border border-white/10 rounded-3xl px-8 py-6 text-white focus:outline-none focus:border-green-600 transition placeholder:text-white/20 resize-none"></textarea>
                                 </div>
 
-                                <button type="submit" class="w-full bg-green-600 text-white font-black uppercase tracking-[0.2em] py-6 rounded-2xl hover:bg-white hover:text-gray-950 transition-all duration-500 shadow-2xl shadow-green-600/20">
-                                    Send Inquiry Now
-                                </button>
+                                 <div class="space-y-4">
+                                    <p class="text-[10px] text-white/30 uppercase tracking-[0.2em] px-4">
+                                        By clicking the button below, you agree to our <a href="PrivacyPolicy.html" class="text-green-500 underline">Privacy Policy</a>.
+                                    </p>
+                                    <button type="submit" class="w-full bg-green-600 text-white font-black uppercase tracking-[0.2em] py-6 rounded-2xl hover:bg-white hover:text-gray-950 transition-all duration-500 shadow-2xl shadow-green-600/20">
+                                        Send Inquiry Now
+                                    </button>
+                                </div>
                                 
                                 <p class="text-[10px] text-center text-white/30 uppercase tracking-widest italic">
                                     <i class="fas fa-shield-alt mr-2"></i> Your information is safe with us. We hate spam too.
@@ -295,5 +300,18 @@
             document.getElementById('inquiryForm').reset();
         }
     </script>
+    <!-- Global Floating WhatsApp Button -->
+    <a href="https://wa.me/8613333189707" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center">
+        <!-- Text Bubble -->
+        <div class="bg-white px-5 py-3 rounded-2xl shadow-2xl border border-gray-100 mr-4 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 hidden md:block">
+            <p class="text-[11px] font-black uppercase tracking-[0.2em] text-gray-900 whitespace-nowrap">Online: Chat on WhatsApp</p>
+        </div>
+        <!-- Icon -->
+        <div class="bg-[#25D366] w-16 h-16 rounded-full flex items-center justify-center shadow-[0_20px_50px_rgba(37,211,102,0.3)] hover:scale-110 transition duration-300 relative">
+            <i class="fab fa-whatsapp text-white text-4xl"></i>
+            <!-- Online Dot -->
+            <span class="absolute top-0 right-0 w-4 h-4 bg-green-400 border-2 border-white rounded-full animate-pulse"></span>
+        </div>
+    </a>
 </body>
 </html>
